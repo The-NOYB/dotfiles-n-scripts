@@ -1,0 +1,205 @@
+!
+! Default mapping for Delete
+!
+*Text.Translations:	   #override \n ~Shift ~Meta ~Alt <Key>Delete: delete-next-character() \n
+*AxeText.Translations:	   #override \n ~Shift ~Meta ~Alt <Key>Delete: delete-next-character() \n
+*XmText.Translations:	   #override \n ~Shift ~Meta ~Alt <Key>Delete: delete-next-character() \n ~Shift ~Meta ~Alt <Key>osfDelete: delete-next-character() \n ~Shift ~Meta ~Alt <Key>osfBackSpace: delete-previous-character() \n
+*XmTextField.Translations: #augment \n ~Shift ~Meta ~Alt <Key>osfDelete: delete-next-character() \n ~Shift ~Meta ~Alt <Key>osfBackSpace: delete-previous-character() \n
+
+!
+! Defaults for 3D Athena Widgets library
+!
+*Form.background:			#DEDEDE
+*Form.foreground:			black
+*TransientShell*Dialog.background:	grey67
+*TransientShell*Dialog.foreground:	black
+*Command.background:			grey77
+*Command.foreground:			black
+*MenuButton.background:			grey77
+*MenuButton.foreground:			black
+*SimpleMenu*background:			grey77
+*SimpleMenu*foreground:			black
+*ScrollbarBackground:			grey67
+*ScrollbarForeground:			grey37
+*Scrollbar*background:			grey77
+*Scrollbar*foreground:			grey37
+*Scrollbar*pointerColor:		black
+*Scrollbar*pointerColorBackground:	white
+*beNiceToColormap:			False
+*Scrollbar*width:			15
+*Scrollbar*height:			15
+*Scrollbar*shadowWidth:			2
+*Scrollbar*borderWidth:			2
+*Scrollbar*cursorName:			top_left_arrow
+*Scrollbar*pushThumb:			false
+*Label*shadowWidth:			2
+*Label*borderWidth:			2
+*shapeStyle:				Rectangle
+*shadowWidth:				2
+*SmeBSB*shadowWidth:			2
+*Toggle*highlightThickness:		2
+*MenuButton*highlightThickness:		2
+*Command*highlightThickness:		2
+*Panner*shadowThickness:		2
+*SimpleMenu*shadowThickness:		2
+*topShadowContrast:			20
+*bottomShadowContrast:			45
+*PushThumb:				False
+
+*printCommand: lpr
+
+Mwm.interactivePlacement:	false
+
+Scrollbar.JumpCursor:	True
+
+
+Ghostview.pageMedia:  A4
+
+*XConsole*text.scrollHorizontal:         False
+*XConsole*text.wrap: line
+
+!
+! XSysinfo
+!
+XSysinfo*.font:                 fixed
+XSysinfo*.title.label:          Linx System Info
+XSysinfo*.title.width:          200
+XSysinfo*.load.name.label:      CPU Load:
+XSysinfo*.idle.name.label:      CPU Idle:
+XSysinfo*.mem.name.label:       Memory:
+XSysinfo*.swap.name.label:      Swap:
+! set foreground colors for load
+XSysinfo*load*bar.foreground:   RosyBrown1
+XSysinfo*load*bar.foreground1:  IndianRed1
+XSysinfo*load*bar.foreground2:  OrangeRed1
+XSysinfo*load*bar.foreground3:  firebrick1
+XSysinfo*load*bar.foreground4:  pink1
+XSysinfo*load*bar.foreground5:  HotPink1
+XSysinfo*load*bar.foreground6:  DeepPink2
+XSysinfo*load*bar.foreground7:  maroon1
+XSysinfo*load*bar.segmentGap:   1
+
+! set idle gauge color
+XSysinfo*idle*bar.foreground:   green
+XSysinfo*idle*bar.backgroud:   red
+
+! set mem info gauge colors
+XSysinfo*mem*bar.foreground:    tomato
+XSysinfo*mem*bar.foreground1:   green3
+XSysinfo*mem*bar.foreground2:   orchid
+
+! set swap gauge color
+XSysinfo*swap*bar.foreground:   hotpink1
+
+! set background
+XSysinfo*.background:           gray50
+XSysinfo*.BarGauge.background:  white
+
+
+*basicLocale:	C
+*timeFormat:	C
+*numeric:	C
+*displayLang:	C
+*inputLang:	C
+
+*customization:	-color
+
+! ===========================================================================
+!                               Motif
+! ===========================================================================
+
+!*XmText.translations: #override\n\
+!       <Key>osfDelete: delete-previous-character()\n\
+!       <Key>osfBackSpace: delete-next-character()\n
+!
+!*XmTextField.translations: #override\n\
+!       <Key>osfDelete: delete-next-character()\n\
+!       <Key>osfBackSpace: delete-previous-character()\n
+
+
+! ===========================================================================
+!                               XTerm
+! ===========================================================================
+!*vt100.translations: #override \
+!        <Key>Home:      string("[1~") \n\
+!        <Key>Insert:    string("[2~") \n\
+!        <Key>BackSpace: string("[3~") \n\
+!        <Key>End:       string("[4~")
+
+!!! URxvt
+URxvt.letterSpace: -3
+urxvt.font:xft:terminus:pixelsize=16:antialias=true 
+URxvt.scrollBar:	false
+URxvt.saveLines:	4096
+URxvt.perl-ext-common: keyboard-select,resize-font,url-select,clipboard
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-f: perl:keyboard-select:search
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.keysym.M-c:   perl:clipboard:copy
+URxvt.keysym.M-v:   perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+Xft*dpi:       100
+Xft*antialias: True
+Xft*hinting:   Full
+URxvt.keysym.KP_Add:    +
+URxvt.keysym.KP_Subtract: -
+URxvt.keysym.KP_Multiply: *
+URxvt.keysym.KP_Divide  : /
+URxvt.keysym.KP_Decimal : .
+URxvt.keysym.KP_Separator : ,
+URxvt.keysym.KP_1:      1
+URxvt.keysym.KP_2:      2
+URxvt.keysym.KP_3:      3
+URxvt.keysym.KP_4:      4
+URxvt.keysym.KP_5:      5
+URxvt.keysym.KP_6:      6
+URxvt.keysym.KP_8:      8
+URxvt.keysym.KP_7:      7
+URxvt.keysym.KP_9:      9
+URxvt.keysym.KP_0:      0
+urxvt.geometry:71x26
+urxvt.keysym.C-j:resize-font:smaller
+urxvt.keysym.C-k:resize-font:bigger
+urxvt.keysym.C-equal:resize-font:reset
+urxvt.linesapce:7
+urxvt.preeditType:Root
+URxvt*transparent: true
+URxvt*shading:20 
+
+! special
+*.foreground:   #bababa
+*.background:   #161b1d
+*.cursorColor:  #ababab
+
+! black
+*.color0:       #000000
+*.color8:       #343434
+
+! red
+*.color1:       #e92f2f
+*.color9:       #e92f2f
+
+! green
+*.color2:       #0ed839
+*.color10:      #0ed839
+
+! yellow
+*.color3:       #dddd13
+*.color11:      #dddd13
+
+! blue
+*.color4:       #3b48e3
+*.color12:      #3b48e3
+
+! magenta
+*.color5:       #f996e2
+*.color13:      #f996e2
+
+! cyan
+*.color6:       #23edda
+*.color14:      #23edda
+
+! white
+*.color7:       #ababab
+*.color15:      #f9f9f9
+
