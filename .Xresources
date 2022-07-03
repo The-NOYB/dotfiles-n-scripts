@@ -163,8 +163,9 @@ urxvt.keysym.C-k:resize-font:bigger
 urxvt.keysym.C-equal:resize-font:reset
 urxvt.linesapce:7
 urxvt.preeditType:Root
-URxvt*transparent: true
-URxvt*shading:20 
+URxvt*transparent: false
+URxvt*shading:15
+ 
 
 ! special
 *.foreground:   #bababa
