@@ -1,6 +1,6 @@
 #!/bin/bash
 
 nitrogen --restore && pgrep -x sxhkd > /dev/null || sxhkd & b.sh | lemonbar -p -B#1F1D19 -F#DEDEDE -u 2  -f "monospace-10" -g x27 | $SHELL &&
-n.sh &
-urxvtd -q -o -f &
+wezterm-mux-server &
+#urxvtd -q -o -f &
 pidof bspswallow || bspswallow &
