@@ -126,51 +126,50 @@ XSysinfo*.BarGauge.background:  white
 !        <Key>BackSpace: string("[3~") \n\
 !        <Key>End:       string("[4~")
 
-!!! URxvt
-URxvt.letterSpace: -3
-urxvt.font:xft:terminus:pixelsize=16:antialias=true 
-URxvt.scrollBar:	false
-URxvt.saveLines:	4096
-URxvt.perl-ext-common: keyboard-select,resize-font,url-select,clipboard
-URxvt.keysym.M-Escape: perl:keyboard-select:activate
-URxvt.keysym.M-f: perl:keyboard-select:search
-URxvt.keysym.M-u: perl:url-select:select_next
-URxvt.keysym.M-c:   perl:clipboard:copy
-URxvt.keysym.M-v:   perl:clipboard:paste
-URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+!!! urxvt-256color
+urxvt-256color.font:xft:Terminus (TTF)-Bold:pixelsize=18
+urxvt-256color.letterspace:1 
+urxvt-256color.scrollBar:	false
+urxvt-256color.saveLines:	4096
+urxvt-256color.perl-ext-common: keyboard-select,resize-font,url-select,clipboard
+urxvt-256color.keysym.M-Escape: perl:keyboard-select:activate
+urxvt-256color.keysym.M-u: perl:url-select:select_next
+urxvt-256color.keysym.M-c:   perl:clipboard:copy
+urxvt-256color.keysym.M-v:   perl:clipboard:paste
+urxvt-256color.keysym.M-C-v: perl:clipboard:paste_escaped
 Xft*dpi:       100
 Xft*antialias: True
-Xft*hinting:   Full
-URxvt.keysym.KP_Add:    +
-URxvt.keysym.KP_Subtract: -
-URxvt.keysym.KP_Multiply: *
-URxvt.keysym.KP_Divide  : /
-URxvt.keysym.KP_Decimal : .
-URxvt.keysym.KP_Separator : ,
-URxvt.keysym.KP_1:      1
-URxvt.keysym.KP_2:      2
-URxvt.keysym.KP_3:      3
-URxvt.keysym.KP_4:      4
-URxvt.keysym.KP_5:      5
-URxvt.keysym.KP_6:      6
-URxvt.keysym.KP_8:      8
-URxvt.keysym.KP_7:      7
-URxvt.keysym.KP_9:      9
-URxvt.keysym.KP_0:      0
-urxvt.geometry:71x26
-urxvt.keysym.C-j:resize-font:smaller
-urxvt.keysym.C-k:resize-font:bigger
-urxvt.keysym.C-equal:resize-font:reset
-urxvt.linesapce:7
-urxvt.preeditType:Root
-URxvt*transparent: false
-URxvt*shading:15
- 
+Xft*hinting:   True
+Xft*rgba: rgb
+urxvt-256color.keysym.KP_Add:    +
+urxvt-256color.keysym.KP_Subtract: -
+urxvt-256color.keysym.KP_Multiply: *
+urxvt-256color.keysym.KP_Divide  : /
+urxvt-256color.keysym.KP_Decimal : .
+urxvt-256color.keysym.KP_Separator : ,
+urxvt-256color.keysym.KP_1:      1
+urxvt-256color.keysym.KP_2:      2
+urxvt-256color.keysym.KP_3:      3
+urxvt-256color.keysym.KP_4:      4
+urxvt-256color.keysym.KP_5:      5
+urxvt-256color.keysym.KP_6:      6
+urxvt-256color.keysym.KP_8:      8
+urxvt-256color.keysym.KP_7:      7
+urxvt-256color.keysym.KP_9:      9
+urxvt-256color.keysym.KP_0:      0
+urxvt-256color.geometry:82x24
+urxvt-256color.keysym.C-j:resize-font:smaller
+urxvt-256color.keysym.C-k:resize-font:bigger
+urxvt-256color.keysym.C-equal:resize-font:reset
+urxvt-256color.preeditType:Root
+urxvt-256color.keysym.M-l:reset 
+urxvt-256color.keysym.M-f:ranger
 
 ! special
-*.foreground:   #bababa
-*.background:   #161b1d
-*.cursorColor:  #ababab
+*.foreground:   #ffdab9
+*.background:   #1d1312
+!1B0E00
+*.cursorColor:  #ffdab9
 
 ! black
 *.color0:       #000000
@@ -203,4 +202,3 @@ URxvt*shading:15
 ! white
 *.color7:       #ababab
 *.color15:      #f9f9f9
-
