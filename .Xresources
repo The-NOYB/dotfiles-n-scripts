@@ -164,6 +164,7 @@ urxvt-256color.keysym.C-equal:resize-font:reset
 urxvt-256color.preeditType:Root
 urxvt-256color.keysym.M-l:reset 
 urxvt-256color.keysym.M-f:ranger
+urxvt-256color.keysym.M-m:mount_drives
 
 ! special
 *.foreground:   #ffdab9
