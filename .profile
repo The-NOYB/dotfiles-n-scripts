@@ -25,6 +25,8 @@ test -z "$PROFILEREAD" && . /etc/profile || true
 #fi
 #
 
+PATH="$PATH:~/cs/scripts"
+
 # default programs
 export EDITOR="vim"
 export BROWSER="qutebrowser"
@@ -45,5 +47,3 @@ export R_PROFILE_USER="$HOME/.config/R/profile"
 export R_HISTFILE="$HOME/.config/R/history"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
-
-treefetch -b
