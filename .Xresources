@@ -127,6 +127,7 @@ XSysinfo*.BarGauge.background:  white
 !        <Key>End:       string("[4~")
 
 !!! urxvt-256color
+!
 urxvt-256color.font:xft:Terminus (TTF)-Bold:pixelsize=18
 urxvt-256color.letterspace:1 
 urxvt-256color.scrollBar:	false

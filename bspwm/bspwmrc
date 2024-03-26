@@ -1,13 +1,15 @@
 #! /bin/bash
 
+# startup items
 xwallpaper --center ~/Pictures/steampunker_wallpp.png &
 pgrep -x sxhkd > /dev/null || sxhkd &
 b2.sh | lemonbar -p -B#1F1D19 -F#DEDEDE -u 3  -f "monospace-10" -g x27 | $SHELL &
 numlockx on &
-picom --vsync &
+picom --experimental-backend --vsync &
 pidof bspswallow || bspswallow &
 while true;do sleep 10; [ -z $(prgrep vlc) ] && [ $(xprintidle) -gt 450000 ] && xset dpms force off; done &
 
+# bspwm configs
 bspc monitor -d I II III 
 bspc config border_width         4
 bspc config split_ratio          0.5
@@ -26,14 +28,14 @@ bspc config left_padding 9
 bspc config bottom_padding 9 
 bspc config pointer_action1 move
 
-
-# rules and stuff
+# rules for application
 bspc rule -a discord desktop='^3'  
 bspc rule -a Chromium-browser desktop='^3'
 bspc rule -a chromium desktop='^3'
 bspc rule -a Thunar state=floating 
 bspc rule -a Pavucontrol state=floating
 bspc rule -a Steam desktop='^2' state=floating
+bspc rule -a Lutris desktop='^2'
 bspc rule -a steam desktop='^2' state=floating
 bspc rule -a vlc state=floating
 bspc rule -a antimicrox state=floating
