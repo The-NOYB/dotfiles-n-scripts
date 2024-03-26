@@ -28,6 +28,8 @@ test -z "$PROFILEREAD" && . /etc/profile || true
 PATH="$PATH:~/cs/scripts"
 
 # default programs
+ssh-add ~/.config/ssh/id_ed25519
+
 export EDITOR="vim"
 export BROWSER="qutebrowser"
 export TERMINAL="urxvt"
