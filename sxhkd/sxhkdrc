@@ -4,7 +4,7 @@
 
 # terminal emulator
 ctrl + alt + t 
-	urxvt
+	urxvt-256color
 
 # program launcher
 super + x
@@ -49,6 +49,8 @@ super + shift + u
 #
 # focus/swap
 #
+super + {h,j,k,l}
+    bspc node -f {west,south,north,east}
 
 # swap the node in the given direction
 super + shift + {Left,Down,Up,Right}
@@ -105,18 +107,23 @@ super + shift + s
 F12 
 	flameshot full -p ~/Pictures 
 
+# date
+super + d
+    notify-send "$(date)"
+
 # volume
 XF86AudioRaiseVolume
-	amixer sset Master 5%+
+	amixer sset Master 2%+
 
 XF86AudioLowerVolume
-	amixer sset Master 5%-
+	amixer sset Master 2%-
 
 XF86AudioMute
 	amixer sset Master toggle
 
 ctrl + F3
-        brit1
 
+    brightnessctl s 5+
+        
 ctrl + F2
-	brit2
+	brightnessctl s 5-
