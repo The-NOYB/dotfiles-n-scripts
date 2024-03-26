@@ -28,7 +28,6 @@ test -z "$PROFILEREAD" && . /etc/profile || true
 PATH="$PATH:~/cs/scripts"
 
 # default programs
-ssh-add ~/.config/ssh/id_ed25519
 
 export EDITOR="vim"
 export BROWSER="qutebrowser"
@@ -49,3 +48,5 @@ export R_PROFILE_USER="$HOME/.config/R/profile"
 export R_HISTFILE="$HOME/.config/R/history"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
+
+ssh-add ~/.config/ssh/id_ed25519
