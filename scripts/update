@@ -1,5 +1,7 @@
 #!/bin/bash
 
+notify-send "Updating dotfiles-n-scripts"
+
 dir=/home/noyb/.local/share/dotfiles-n-scripts/
 str=""
 
