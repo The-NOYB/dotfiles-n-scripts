@@ -104,6 +104,7 @@ super + b
 # screenshot
 super + shift + s
 	flameshot gui
+
 F12 
 	flameshot full -p ~/Pictures 
 
