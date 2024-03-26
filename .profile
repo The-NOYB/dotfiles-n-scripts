@@ -25,7 +25,7 @@ test -z "$PROFILEREAD" && . /etc/profile || true
 #fi
 #
 
-PATH="$PATH:~/cs"
+PATH="$PATH:~/cs/scripts/"
 
 # default programs
 export EDITOR="vim"
