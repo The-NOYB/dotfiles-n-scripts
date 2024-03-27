@@ -3,7 +3,7 @@
 # startup programs
 xwallpaper --center ~/Pictures/steampunker_wallpp.png &
 pgrep -x sxhkd > /dev/null || sxhkd &
-b2.sh | lemonbar -p -B#1F1D19 -F#DEDEDE -u 3  -f "monospace-10" -g x27 | $SHELL &
+b.sh | lemonbar -p -B#1F1D19 -F#DEDEDE -u 3  -f "monospace-10" -g x27 | $SHELL &
 numlockx on &
 picom --experimental-backend --vsync &
 pidof bspswallow || bspswallow &
