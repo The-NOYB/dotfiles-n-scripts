@@ -21,6 +21,7 @@ alias arduino-cli='arduino-cli --config-file $XDG_CONFIG_HOME/arduino15/arduino-
 alias lemonstart='b.sh | lemonbar -p -B#1F1D19 -F#DEDEDE -u 3  -f "monospace-10" -g x27'
 alias normdisp='xrandr --output eDP-1 --scale 1'
 alias nettest='curl parrot.live'
+alias clearswap='rm /home/noyb/.local/state/vim/swap/*'
 
 ## default programs
 #export EDITOR="vim"
