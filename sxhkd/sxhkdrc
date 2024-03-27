@@ -122,7 +122,6 @@ XF86AudioLowerVolume
 XF86AudioMute
 	amixer sset Master toggle
 
-# brightness
 ctrl + F3
     brightnessctl s 5+
         
