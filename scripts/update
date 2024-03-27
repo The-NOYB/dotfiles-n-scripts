@@ -2,20 +2,27 @@
 
 notify-send "Updating dotfiles-n-scripts"
 
-dir=/home/noyb/.local/share/dotfiles-n-scripts/
+rm -r ~/maya/scripts > /dev/null
 
+# vars
+dir=/home/noyb/.local/share/dotfiles-n-scripts/
 str=""
 
-for i in $(ls -ap $dir | grep -v "\.\(\w\+\)\?/")
-    do  targ=$(find ~ -maxdepth 2 -name "${i%/}")
+for i in $(ls -ap $dir | grep -v "\.\(\w\+\)\?/")   # taking items from dir dotfiles-n-scripts
+    do  targ=$(find ~ -maxdepth 2 -name "${i%/}")   # finding the original items in the respective dirs 
 
+    # condition statement for files
     ( [ ! -z $targ ] && [ $i == ${i%/} ] && [ $(( $(stat -c "%Y" $targ) - $(stat -c "%Y" $dir$i) )) -gt 0 ] ) && cp $targ $dir && str="${str} $i"
 
+    # condition statement for dirs
     ( [ ! -z $targ ] && [ $i != ${i%/} ] && [ $(( $(stat -c "%Y" $targ) - $(stat -c "%Y" $dir${i%/}) )) -gt 0 ] ) && cp -r --remove-destination $targ $dir && str="${str} $i"
 done
 
-git -C $dir add .
+# add all new files to git repo
+git -C $dir add .  
 
+# update the remote repo
 [ -n "$str" ] && git -C $dir commit -q -a -m "updated $str" && git -C $dir push -q origin main && notify-send "The following have been updated $str"
 
+# do nothing
 [ -z "$str" ] && notify-send "There is nothing to update"
