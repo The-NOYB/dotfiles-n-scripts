@@ -123,7 +123,6 @@ XF86AudioMute
 	amixer sset Master toggle
 
 ctrl + F3
-
     brightnessctl s 5+
         
 ctrl + F2

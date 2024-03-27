@@ -10,6 +10,7 @@
 # here, since multilingual X sessions would not work properly if LANG is over-
 # ridden in every subshell.
 
+#idk these important maybe
 test -s ~/.alias && . ~/.alias || true
 stty werase '^h'
 rm ~/.bash_history-* ~/dhat-heap.json .py* 2>/dev/null
