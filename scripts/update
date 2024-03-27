@@ -14,6 +14,8 @@ for i in $(ls -ap $dir | grep -v "\.\(\w\+\)\?/")
     ( [ ! -z $targ ] && [ $i != ${i%/} ] && [ $(( $(stat -c "%Y" $targ) - $(stat -c "%Y" $dir${i%/}) )) -gt 0 ] ) && cp -r --remove-destination $targ $dir && str="${str} $i"
 done
 
+git -C $dir add -q .
+
 [ -n "$str" ] && git -C $dir commit -q -a -m "updated $str" && git -C $dir push -q origin main && notify-send "The following have been updated $str"
 
 [ -z "$str" ] && notify-send "There is nothing to update"

@@ -17,9 +17,13 @@ mode=$(printf "resall\nall\ncomp\nexit" | dmenu -sb "dark green")
 #esac
 
 while true; do
+
 temp=$(($(cat /sys/class/thermal/thermal_zone0/temp)/1000));
 mem=$(($(free | awk '/^Mem:/{print $3}')/1024));
+
 [ $mem -gt 4900 ] && notify-send "memory usage is high: $(free -h | awk '/^Mem:/{print $3"/"$2}') $(date "+%H:%M")";
+
 [ $temp -gt 77 ] && notify-send "temp is high: $temp°C $(date "+%H:%M")";
 sleep 10;
+
 done
