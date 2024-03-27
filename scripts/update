@@ -2,14 +2,12 @@
 
 notify-send "Updating dotfiles-n-scripts"
 
-rm -r ~/maya/scripts > /dev/null
-
 # vars
 dir=/home/noyb/.local/share/dotfiles-n-scripts/
 str=""
 
 for i in $(ls -ap $dir | grep -v "\.\(\w\+\)\?/")   # taking items from dir dotfiles-n-scripts
-    do  targ=$(find ~ -maxdepth 2 -name "${i%/}")   # finding the original items in the respective dirs 
+    do  targ=$(find ~ -maxdepth 2 -name "${i%/}" | grep -Ev ".cache|maya")   # finding the original items in the respective dirs and avoiding wrong dirs
     echo $targ | grep -v cache
     # condition statement for files
     ( [ ! -z $targ ] && [ $i == ${i%/} ] && [ $(( $(stat -c "%Y" $targ) - $(stat -c "%Y" $dir$i) )) -gt 0 ] ) && cp $targ $dir && str="${str} $i"
