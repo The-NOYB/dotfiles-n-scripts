@@ -38,5 +38,7 @@ bspc rule -a Steam desktop='^2' state=floating
 bspc rule -a Lutris desktop='^2'
 bspc rule -a steam desktop='^2' state=floating
 bspc rule -a vlc state=floating
-bspc rule -a antimicrox state=floating
+bspc rule -a antimicrox state=floating 
+bspc rule -a Maya-2024 state=pseudo_tiled desktop='^2'
+bspc rule -a Gimp state=pseudo_tiled desktop='^2'
 bspc rule -a gnome-calculator state=floating
