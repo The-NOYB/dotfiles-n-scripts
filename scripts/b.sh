@@ -35,7 +35,7 @@ wifi(){
 
 while  true
 do
-    BAR_INPUT="%{l}%{U#247948} %{F#23ba67}┃%{F}$(d) %{F#23ba67}┃┃ %{F} %{+u}$(window)%{-u}%{U} %{c} %{B#23ba67}%{F#1F1D19} $(clock) %{r}%{F}%{B}%{U#247948}%{F#23ba67} ┃ ↑↓ %{F}%{+u}$(wifi)%{-u} %{F#23ba67} ┃ λ %{F}%{+u}$(vol) %{F#23ba67} ┃ Δ %{F}%{+u}$(temp)%{-u} %{F#23ba67} ┃ Ξ %{F}%{+u}$(mem)%{-u} %{F#23ba67} ┃ ± %{F}%{+u}$(battery)%{-u} %{F#23ba67} ┃ %{F}%{U}%{F}%{A:~/cs/scripts/off:}:~:%{A} %{}"
+    BAR_INPUT="%{l}%{U#247948} %{F#23ba67}┃%{F}$(d) %{F#23ba67}┃┃ %{F} %{+u}$(window)%{-u}%{U} %{c} %{B#23ba67}%{F#1F1D19} $(clock) %{r}%{F}%{B}%{U#247948}%{F#23ba67} ┃ ↑↓ %{F}%{+u}$(wifi)%{-u} %{F#23ba67} ┃ λ %{F}%{+u}$(vol) %{F#23ba67} ┃ Δ %{F}%{+u}$(temp)%{-u} %{F#23ba67} ┃ Ξ %{F}%{+u}$(mem)%{-u} %{F#23ba67} ┃ ± %{F}%{+u}$(battery)%{-u} %{F#23ba67} ┃ %{F}%{U}%{F}%{A:~/.local/bin/off:}:~:%{A} %{}"
     echo $BAR_INPUT
     sleep 1
 done

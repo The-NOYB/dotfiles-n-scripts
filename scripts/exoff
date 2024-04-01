@@ -1,0 +1,81 @@
+#!/usr/bin/python3
+import pygame, sys
+from subprocess import Popen
+
+pygame.init()
+clock = pygame.time.Clock()
+window = pygame.display.set_mode((600,400))
+color = [255,195,115]
+val = "blue"
+left = False
+time1, time2 = 0, 0
+font = pygame.font.Font(None,48)
+isat = [False, False, False] 
+surface1 = pygame.Surface([125,50])
+surface1.set_alpha(200)
+surface1.fill([30,24,14])
+surface2 = pygame.Surface.copy(surface1)
+surface3 = pygame.Surface.copy(surface1)
+
+def anim(cond,surface):
+    x = surface.get_alpha()
+    if cond:
+        x -= 30 if x > 105 else 0
+        surface.set_alpha(x)
+    else:
+        x += 30 if x < 200 else 0
+        surface.set_alpha(x)
+
+while True:
+    window.fill((30,24,14))
+    anim(isat[0],surface1)
+    anim(isat[1],surface2)
+    anim(isat[2],surface3)
+    
+    if time1 - time2 > 400 and left:
+        pygame.quit()
+        sys.exit()
+    
+    if pygame.mouse.get_pos()[1] >= 275 and pygame.mouse.get_pos()[1] <= 325 and pygame.mouse.get_pos()[0] >= 65 and pygame.mouse.get_pos()[0] <= 190:
+        isat[0] = True
+    else:
+        isat[0] = False
+
+    if pygame.mouse.get_pos()[1] >= 275 and pygame.mouse.get_pos()[1] <= 325 and pygame.mouse.get_pos()[0] >= 240 and pygame.mouse.get_pos()[0] <= 375:
+        isat[1] = True
+    else:
+        isat[1] = False
+
+    if pygame.mouse.get_pos()[1] >= 275 and pygame.mouse.get_pos()[1] <= 325 and pygame.mouse.get_pos()[0] >= 415 and pygame.mouse.get_pos()[0] <= 540:
+        isat[2] = True
+    else:
+        isat[2] = False
+    
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+        if event.type == pygame.WINDOWLEAVE:
+            time2 = time1
+            left = True            
+        if event.type == pygame.WINDOWENTER:
+            left = False
+        if event.type == pygame.MOUSEBUTTONDOWN and isat[0]:
+            Popen('sudo shutdown now', shell=True)
+        if event.type == pygame.MOUSEBUTTONDOWN and isat[1]:
+            Popen('sleep 1 && systemctl suspend', shell=True)
+            pygame.quit()
+            sys.exit()
+        if event.type == pygame.MOUSEBUTTONDOWN and isat[2]:
+            Popen('sudo reboot', shell=True)
+ 
+    pygame.draw.rect(window, color, pygame.Rect(65,275,125,50)) 
+    pygame.draw.rect(window, color, pygame.Rect(240,275,125,50)) 
+    pygame.draw.rect(window, color, pygame.Rect(415,275,125,50)) 
+    window.blit(surface1,(65,275))
+    window.blit(surface2,(240,275))
+    window.blit(surface3,(415,275))
+    window.blit(font.render("WHATCHU WANNA DO",True,(180,140,75)),(115,60))
+    time1 = pygame.time.get_ticks()
+    pygame.display.update()
+    clock.tick(15)
