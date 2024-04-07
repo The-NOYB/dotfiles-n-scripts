@@ -7,7 +7,6 @@ b.sh | lemonbar -p -B#1F1D19 -F#DEDEDE -u 3  -f "monospace-10" -g x27 | $SHELL &
 numlockx on &
 picom --experimental-backend --vsync &
 pidof bspswallow || bspswallow &
-while true; do sleep 10; [ -z $(prgrep vlc) ] && [ $(xprintidle) -gt 450000 ] && xset dpms force off; done &
 
 # bspwm configs
 bspc monitor -d I II III 

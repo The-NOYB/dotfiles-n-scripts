@@ -24,9 +24,9 @@ batt=$(cat /sys/class/power_supply/BAT1/status)
 charg=$(cat /sys/class/power_supply/BAT1/capacity)
 
 [ ${batt:0:1} == "D" ] && notify-send "Warning laptop not charging $(cat /sys/class/power_supply/BAT1/capacity)% $(date "+%H:%M")";
-[ $mem -gt 4900 ] && notify-send "memory usage is high: $(free -h | awk '/^Mem:/{print $3"/"$2}') $(date "+%H:%M")";
+[ $mem -gt 5100 ] && notify-send "memory usage is high: $(free -h | awk '/^Mem:/{print $3"/"$2}') $(date "+%H:%M")";
 
-[ $temp -gt 77 ] && notify-send "temp is high: $temp°C $(date "+%H:%M")";
+[ $temp -gt 79 ] && notify-send "temp is high: $temp°C $(date "+%H:%M")";
 sleep 10;
 
 done
