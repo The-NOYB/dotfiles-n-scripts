@@ -23,25 +23,4 @@ alias lemonstart='b.sh | lemonbar -p -B#1F1D19 -F#DEDEDE -u 3  -f "monospace-10"
 alias normdisp='xrandr --output eDP-1 --scale 1'
 alias nettest='curl parrot.live'
 alias clearswap='rm /home/noyb/.local/state/vim/swap/*'
-
-## default programs
-#export EDITOR="vim"
-#export BROWSER="qutebrowser"
-#export TERMINAL="urxvt"
-#
-## setting a xdg dirs
-#export XDG_CONFIG_HOME="$HOME/.config"
-#export XDG_CACHE_HOME="$HOME/.cache"
-#export XDG_DATA_HOME="$HOME/.local/share"
-#export XDG_STATE_HOME="$HOME/.local/state"
-#
-## dir vars for programs
-#export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
-#export W3M_DIR="$XDG_STATE_HOME/w3m"
-#export R_HOME_USER="$HOME/.config/R"
-#export R_PROFILE_USER="$HOME/.config/R/profile"
-#export R_HISTFILE="$HOME/.config/R/history"
-#export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
-#export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
-
-treefetch -b
+alias known-networks='nmcli connection'
