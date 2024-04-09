@@ -1,3 +1,4 @@
+treefetch -b
 # removing some files i dont like
 ( rm ~/.bash_history-* ~/dhat-heap.json .py* ) 2> /dev/null
 
