@@ -1,0 +1,11 @@
+program A
+  implicit none
+end program A
+
+function B()
+  implicit none
+end function
+
+subroutine C
+  implicit none
+end subroutine C

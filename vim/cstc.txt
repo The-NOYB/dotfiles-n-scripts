@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+    int i,j,k;
+    double a,b,c;
+    char l,m,n;
+
+    return 0
+}

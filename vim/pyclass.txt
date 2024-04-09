@@ -1,0 +1,11 @@
+class A():
+    def __init__(self):
+        super().__init__()
+
+    def B(self):
+        pass
+    
+    def C(self):
+        pass
+
+something = A()

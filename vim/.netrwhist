@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/noyb/cs/games/snek/sprites'
+let g:netrw_dirhist_6='/home/noyb/cs/games/snek'
+let g:netrw_dirhist_5='/'
+let g:netrw_dirhist_4='/home/noyb/cs/games/snek/data'
+let g:netrw_dirhist_3='/home/noyb/cs/games/snek'
+let g:netrw_dirhist_2='/home/noyb/cs/games/snek/sprites'
+let g:netrw_dirhist_1='/home/noyb/cs/.scripts'
+let g:netrw_dirhist_0='/home/noyb/make'
+let g:netrw_dirhist_9='/home/noyb/cs/games/snek'
+let g:netrw_dirhist_8='/home/noyb/cs/games/snek/__pycache__'

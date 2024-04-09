@@ -1,0 +1,261 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	Development	//
+A	Fortran/somethin.f95	/^subroutine A /;"	s
+B	Fortran/somethin.f95	/^subroutine B /;"	s
+C	Fortran/somethin.f95	/^subroutine C /;"	s
+FPS	games/test/test.py	/^    FPS = font.render("FPS: "+str((clock.get_fps()+x)\/2)[:5],True,(255,255,255))$/;"	v
+Game	games/HFOLorig/HFOL.py	/^class Game():$/;"	c
+Game	games/HFOLorig/new.py	/^class Game():$/;"	c
+Game	games/dino/dino.py	/^class Game():$/;"	c
+Game	games/pong/pong.py	/^class Game():$/;"	c
+__init__	games/HFOLorig/HFOL.py	/^    def __init__(self,screen):$/;"	m	class:Game
+__init__	games/HFOLorig/new.py	/^    def __init__(self,screen):$/;"	m	class:Game
+__init__	games/dino/dino.py	/^    def __init__(self):$/;"	m	class:Game
+__init__	games/pong/pong.py	/^    def __init__(self):$/;"	m	class:Game
+a	Fortran/new.f95	/^    integer :: a,/;"	v	program:menuloop
+a	Fortran/somethin.f95	/^    real/;"	v	program:yes
+a	py/ok.py	/^a='sTRi{}Ng'$/;"	v
+a	py/pysql.py	/^a=([101,'SUNAINA','MUMBAI','1998-10-15',90000],[102,'ANAMIKA','DELHI','1994-12-24',80000],[103,'DEEPTI','CHANDIGARG','2001-12-21',82000],[104,'MEENAKSHI','DELHI','2002-12-25',78000],[105,'RICHA','MUMBAI','1996-01-12',95000],[106,'MANIPRABHA','CHENNAI','2001-12-12',69000])$/;"	v
+a	py/pysql.py	/^a=cursor.fetchall()$/;"	v
+a	py/temp.py	/^    a=a+(i,)$/;"	v
+a	py/temp.py	/^a=("a",)$/;"	v
+a	py/temp.py	/^a=("who", "what", "when")$/;"	v
+a	py/temp.py	/^a=(1,2,4,4,5)$/;"	v
+a	py/temp.py	/^a=[1,2,3,4,5]$/;"	v
+a	py/temp.py	/^a=a+b$/;"	v
+a	py/temp.py	/^a=dict.fromkeys([1,2],"what the hell")$/;"	v
+a	py/temp.py	/^a=list(map(str, input("gimme ur name").split()))$/;"	v
+a	py/temp.py	/^a=tuple(map(str, input("gimme ur name but tuple").split()))$/;"	v
+a	py/temp.py	/^a={"what":10,"do":5,"you":69,"you":34}$/;"	v
+a	py/temp.py	/^a={}$/;"	v
+alphav	games/pong/pong.py	/^alphav = [40,False]$/;"	v
+angles	Fortran/somethin.f95	/^    real(kind=4), dimension(5) :: angles,/;"	v	program:yes
+anim	games/HFOLorig/HFOL.py	/^    def anim(self):$/;"	m	class:Game
+anim	games/HFOLorig/new.py	/^    def anim(self):$/;"	m	class:Game
+animation	games/dino/dino.py	/^    def animation(self):$/;"	m	class:Game
+ans	Fortran/new.f95	/^    character :: ans*/;"	v	program:menuloop
+arns	Fortran/somethin.f95	/^    integer*16 :: perm, arns,/;"	v	program:yes
+ast	games/pong/pong.py	/^def ast(alphav):$/;"	f
+b	Fortran/new.f95	/^    integer :: a,b,/;"	v	program:menuloop
+b	Fortran/somethin.f95	/^    real :: a,b,/;"	v	program:yes
+b	py/ok.py	/^b='veryimpstr'$/;"	v
+b	py/temp.py	/^b=("no hoes",)*5$/;"	v
+b	py/temp.py	/^b=("what",10,"whao")$/;"	v
+b	py/temp.py	/^b=a.copy()$/;"	v
+b	py/temp.py	/^b=a.index("when")$/;"	v
+b	py/temp.py	/^b=int(input("enther the number of elements"))$/;"	v
+b	py/temp.py	/^b=round(13.431,1)$/;"	v
+balani	games/pong/pong.py	/^    def balani(self):$/;"	m	class:Game
+ballm1	games/pong/pong.py	/^    def ballm1(self,Rect,balv,mode):$/;"	m	class:Game
+ballm2	games/pong/pong.py	/^    def ballm2(self,Rect,balv,mode):$/;"	m	class:Game
+barc1	games/pong/pong.py	/^    def barc1(self,ball,score,bar,balv,barv):$/;"	m	class:Game
+barc2	games/pong/pong.py	/^    def barc2(self,ball,score,bar,balv,barv):$/;"	m	class:Game
+base_font1	games/dino/dino.py	/^base_font1 = pygame.font.Font(None, 24)$/;"	v
+base_font2	games/dino/dino.py	/^base_font2 = pygame.font.Font(None, 12)$/;"	v
+battery	.scripts/b.sh	/^battery() {$/;"	f
+battery	.scripts/b2.sh	/^battery() {$/;"	f
+c	Fortran/new.f95	/^    integer :: a,b,c$/;"	v	program:menuloop
+c	Fortran/somethin.f95	/^    real :: a,b,c,/;"	v	program:yes
+c	py/temp.py	/^    c=input("something")$/;"	v
+cactee	games/dino/dino.py	/^def cactee(score,l):$/;"	f
+check	games/HFOLorig/HFOL.py	/^    def check(self):$/;"	m	class:Game
+check	games/HFOLorig/new.py	/^    def check(self):$/;"	m	class:Game
+check_swallowing_process	.scripts/bspswallow	/^check_swallowing_process() {$/;"	f
+choice	games/HFOLorig/HFOL.py	/^from random import choice$/;"	i
+choice	games/HFOLorig/new.py	/^from random import choice$/;"	i
+choice	games/dino/dino.py	/^from random import choice$/;"	i
+choice	games/pong/pong.py	/^from random import choice$/;"	i
+choice	games/rectdrag/rect.py	/^from random import choice$/;"	i
+choice	py/ok.py	/^from random import randint, choice$/;"	i
+circle	games/pong/pong.py	/^circle = pygame.image.load("Untitled.png")$/;"	v
+clock	.scripts/b.sh	/^clock() {$/;"	f
+clock	.scripts/b2.sh	/^clock() {$/;"	f
+clock	games/HFOLorig/HFOL.py	/^clock = pygame.time.Clock()$/;"	v
+clock	games/HFOLorig/circle.py	/^clock = pygame.time.Clock()$/;"	v
+clock	games/HFOLorig/new.py	/^clock = pygame.time.Clock()$/;"	v
+clock	games/dino/dino.py	/^clock = pygame.time.Clock()$/;"	v
+clock	games/pong/pong.py	/^clock = pygame.time.Clock()$/;"	v
+clock	games/rectdrag/rect.py	/^clock = pygame.time.Clock()$/;"	v
+clock	games/test/test.py	/^clock = pygame.time.Clock()$/;"	v
+color	games/test/test.py	/^    color = colorsw(color)$/;"	v
+color	games/test/test.py	/^color = [0,0,0]$/;"	v
+colors	games/HFOLorig/HFOL.py	/^colors = [[255,154,162], [255,183,178], [230,156,106], [175,231,83], [181,234,215], [132,143,186]]$/;"	v
+colors	games/HFOLorig/new.py	/^colors = [[255,154,162], [255,183,178], [230,156,106], [175,231,83], [181,234,215], [132,143,186]]$/;"	v
+colors	games/test/test.py	/^colors = False$/;"	v
+colorsw	games/test/test.py	/^def colorsw(color):$/;"	f
+colour	games/pong/pong.py	/^    def colour(self):$/;"	m	class:Game
+connection	py/pysql.py	/^connection = m.connect(user='root',password = 'ThIs1SaGo0dP@ass',database='skull_emoji')$/;"	v
+coss	Fortran/somethin.f95	/^    real(kind=4), dimension(5) :: angles, rads, sins, coss,/;"	v	program:yes
+cots	Fortran/somethin.f95	/^    real(kind=4), dimension(5) :: angles, rads, sins, coss, tans, secs, cscs, cots$/;"	v	program:yes
+cscs	Fortran/somethin.f95	/^    real(kind=4), dimension(5) :: angles, rads, sins, coss, tans, secs, cscs,/;"	v	program:yes
+csv	py/ok.py	/^import csv$/;"	i
+cursor	py/pysql.py	/^cursor = connection.cursor(buffered=True)$/;"	v
+cutscene	games/HFOLorig/HFOL.py	/^    def cutscene(self):$/;"	m	class:Game
+cutscene	games/HFOLorig/new.py	/^    def cutscene(self):$/;"	m	class:Game
+d	.scripts/b.sh	/^d(){$/;"	f
+d	.scripts/b2.sh	/^d(){$/;"	f
+d	Fortran/somethin.f95	/^    real :: a,b,c,d,/;"	v	program:yes
+d	py/ok.py	/^d={'a':1,'b':2,"c":4,'d':5,'e':6,'f':7}$/;"	v
+d	py/temp.py	/^    d=input("anotherthing")$/;"	v
+drawladder	games/HFOLorig/HFOL.py	/^    def drawladder(self):$/;"	m	class:Game
+drawladder	games/HFOLorig/new.py	/^    def drawladder(self):$/;"	m	class:Game
+e	Fortran/somethin.f95	/^    integ/;"	v	program:yes
+f	Fortran/somethin.f95	/^    real :: a,b,c,d,f$/;"	v	program:yes
+f	games/HFOLorig/HFOL.py	/^f=open("data\/dat.txt")$/;"	v
+f	games/HFOLorig/new.py	/^f=open("data\/dat.txt")$/;"	v
+f	py/ok.py	/^f=open('\/home\/noyb\/cs\/.files\/dbms','r')$/;"	v
+f	py/ok.py	/^f=open('ores.txt','w')$/;"	v
+fact	Fortran/somethin.f95	/^    integer*16 :: perm, arns,fact$/;"	v	program:yes
+fact	Fortran/somethin.f95	/^recursive integer*16 function fact(/;"	f
+font	games/pong/pong.py	/^font = pygame.font.Font(None, 24)$/;"	v
+font	games/rectdrag/rect.py	/^font = pygame.font.Font(None,36)$/;"	v
+font	games/test/test.py	/^font = pygame.font.Font(None,48)$/;"	v
+fontc	games/HFOLorig/HFOL.py	/^fontc = pygame.font.Font(None,48)$/;"	v
+fontc	games/HFOLorig/new.py	/^fontc = pygame.font.Font(None,48)$/;"	v
+fontt	games/HFOLorig/HFOL.py	/^fontt = pygame.font.Font(None,72)$/;"	v
+fontt	games/HFOLorig/new.py	/^fontt = pygame.font.Font(None,72)$/;"	v
+fps	games/HFOLorig/new.py	/^    fps = fps + 1 if fps < 60 else 1$/;"	v
+fps	games/HFOLorig/new.py	/^fps = 0$/;"	v
+g	Fortran/somethin.f95	/^    character (len=20),dimension(2) :: g$/;"	v	program:yes
+game	games/HFOLorig/HFOL.py	/^    def game(self):$/;"	m	class:Game
+game	games/HFOLorig/new.py	/^    def game(self):$/;"	m	class:Game
+game	games/dino/dino.py	/^    def game(self):$/;"	m	class:Game
+game1	games/pong/pong.py	/^    def game1(self):$/;"	m	class:Game
+game2	games/pong/pong.py	/^    def game2(self):$/;"	m	class:Game
+gameov	games/HFOLorig/HFOL.py	/^    def gameov(self):$/;"	m	class:Game
+gameov	games/HFOLorig/new.py	/^    def gameov(self):$/;"	m	class:Game
+gameov	games/pong/pong.py	/^    def gameov(self):$/;"	m	class:Game
+gameover	games/dino/dino.py	/^    def gameover(self):$/;"	m	class:Game
+gamepre1	games/pong/pong.py	/^    def gamepre1(self):$/;"	m	class:Game
+gamepre2	games/pong/pong.py	/^    def gamepre2(self):$/;"	m	class:Game
+genheart	games/HFOLorig/new.py	/^    def genheart(self):$/;"	m	class:Game
+get_class	.scripts/bspswallow	/^get_class() {$/;"	f
+get_pid	.scripts/bspswallow	/^get_pid() {$/;"	f
+get_ppid	.scripts/bspswallow	/^get_ppid() {$/;"	f
+i	Fortran/somethin.f95	/^    in/;"	v	program:yes
+info	games/HFOLorig/HFOL.py	/^info = [ i.center(56) for i in info]$/;"	v
+info	games/HFOLorig/HFOL.py	/^info = info.split('\\n')$/;"	v
+info	games/HFOLorig/HFOL.py	/^info=f.read()$/;"	v
+info	games/HFOLorig/new.py	/^info = [ i.center(56) for i in info]$/;"	v
+info	games/HFOLorig/new.py	/^info = info.split('\\n')$/;"	v
+info	games/HFOLorig/new.py	/^info=f.read()$/;"	v
+j	Fortran/somethin.f95	/^    character :: k*30, j*/;"	v	program:yes
+jame	games/HFOLorig/HFOL.py	/^jame = Game(window) $/;"	v
+jame	games/HFOLorig/new.py	/^jame = Game(window) $/;"	v
+k	Fortran/somethin.f95	/^    character :: k*/;"	v	program:yes
+l	Fortran/somethin.f95	/^    integer*16 :: e,l /;"	v	program:yes
+l	py/ok.py	/^l=[13,57,6,4,5,8,87,5,4]$/;"	v
+ladgen	games/HFOLorig/HFOL.py	/^    def ladgen(self):$/;"	m	class:Game
+ladgen	games/HFOLorig/new.py	/^    def ladgen(self):$/;"	m	class:Game
+left	games/rectdrag/rect.py	/^                left = False$/;"	v
+left	games/rectdrag/rect.py	/^                left = True$/;"	v
+listr	games/rectdrag/rect.py	/^listr = [pygame.transform.rotate(this,x) for x in range(5,120,5)]$/;"	v
+m	Fortran/somethin.f95	/^    integer(kind=16), dime/;"	v	program:yes
+m	py/pysql.py	/^import mysql.connector as m$/;"	i
+makepart	games/HFOLorig/HFOL.py	/^    def makepart(self):$/;"	m	class:Game
+makepart	games/HFOLorig/new.py	/^    def makepart(self):$/;"	m	class:Game
+math	py/temp.py	/^import random, statistics, math$/;"	i
+mem	.scripts/b.sh	/^mem() {$/;"	f
+mem	.scripts/b2.sh	/^mem() {$/;"	f
+menu	games/HFOLorig/HFOL.py	/^    def menu(self):$/;"	m	class:Game
+menu	games/HFOLorig/new.py	/^    def menu(self):$/;"	m	class:Game
+menu	games/dino/dino.py	/^    def menu(self):$/;"	m	class:Game
+menu	games/pong/pong.py	/^    def menu(self):$/;"	m	class:Game
+menuloop	Fortran/new.f95	/^program menuloop$/;"	p
+mixer	games/HFOLorig/HFOL.py	/^from pygame import mixer$/;"	i
+mixer	games/HFOLorig/new.py	/^from pygame import mixer$/;"	i
+mixer	games/dino/dino.py	/^from pygame import mixer$/;"	i
+mixer	games/pong/pong.py	/^from pygame import mixer$/;"	i
+mixer	games/rectdrag/rect.py	/^from pygame import mixer$/;"	i
+mysql	py/pysql.py	/^import mysql.connector as m$/;"	i
+n	Fortran/somethin.f95	/^    int/;"	v	program:yes
+name	Fortran/new.f95	/^    character(:),allocatable:: name$/;"	v	program:menuloop
+new_sub	Fortran/somethin.f95	/^subroutine new_sub$/;"	s
+pause	games/dino/dino.py	/^    def pause(self):$/;"	m	class:Game
+perm	Fortran/somethin.f95	/^    integer*16 :: perm,/;"	v	program:yes
+perm	Fortran/somethin.f95	/^integer*16 function perm(/;"	f
+pi	Fortran/somethin.f95	/^    real, parameter :: pi /;"	v	program:yes
+pickle	py/ok.py	/^import pickle$/;"	i
+place	games/HFOLorig/HFOL.py	/^    def place(self,y):$/;"	m	class:Game
+place	games/HFOLorig/new.py	/^    def place(self,y):$/;"	m	class:Game
+pong	games/pong/pong.py	/^pong = Game()$/;"	v
+powerup	games/pong/pong.py	/^    def powerup(self,ball):$/;"	m	class:Game
+pressed	games/test/test.py	/^            pressed = pygame.mouse.get_pressed()$/;"	v
+pygame	games/HFOLorig/HFOL.py	/^import pygame, sys$/;"	i
+pygame	games/HFOLorig/circle.py	/^import pygame, sys$/;"	i
+pygame	games/HFOLorig/new.py	/^import pygame, sys$/;"	i
+pygame	games/dino/dino.py	/^import pygame, sys$/;"	i
+pygame	games/pong/pong.py	/^import pygame, sys$/;"	i
+pygame	games/rectdrag/rect.py	/^import pygame, sys$/;"	i
+pygame	games/test/test.py	/^import pygame, sys$/;"	i
+query	py/pysql.py	/^query='insert into trainer values(%s,%s,%s,%s,%s)'$/;"	v
+r	games/HFOLorig/circle.py	/^r=0$/;"	v
+rads	Fortran/somethin.f95	/^    real(kind=4), dimension(5) :: angles, rads,/;"	v	program:yes
+randint	py/ok.py	/^from random import randint, choice$/;"	i
+random	py/temp.py	/^import random, statistics, math$/;"	i
+readme	games/HFOLorig/HFOL.py	/^    def readme(self):$/;"	m	class:Game
+readme	games/HFOLorig/new.py	/^    def readme(self):$/;"	m	class:Game
+right	games/rectdrag/rect.py	/^                right = False$/;"	v
+right	games/rectdrag/rect.py	/^                right = True$/;"	v
+s	games/HFOLorig/circle.py	/^    s=r*1.4 $/;"	v
+s	games/HFOLorig/circle.py	/^s=0$/;"	v
+scospe	games/pong/pong.py	/^    def scospe(self,score,balv,barl=[]):$/;"	m	class:Game
+screen	games/dino/dino.py	/^screen = pygame.display.set_mode((800,600))$/;"	v
+screen	games/pong/pong.py	/^screen = pygame.display.set_mode((800,600))#, pygame.FULLSCREEN)$/;"	v
+screen	games/test/test.py	/^screen = pygame.display.set_mode((800,600))$/;"	v
+secs	Fortran/somethin.f95	/^    real(kind=4), dimension(5) :: angles, rads, sins, coss, tans, secs,/;"	v	program:yes
+selector	games/HFOLorig/HFOL.py	/^    def selector(self):$/;"	m	class:Game
+selector	games/HFOLorig/new.py	/^    def selector(self):$/;"	m	class:Game
+selectstage	games/dino/dino.py	/^    def selectstage(self):$/;"	m	class:Game
+sins	Fortran/somethin.f95	/^    real(kind=4), dimension(5) :: angles, rads, sins,/;"	v	program:yes
+spit	.scripts/bspswallow	/^spit() {$/;"	f
+spwant	games/dino/dino.py	/^spwant = 0$/;"	v
+stage	games/dino/dino.py	/^stage = Game() $/;"	v
+stagesel	games/pong/pong.py	/^    def stagesel(self,time1):$/;"	m	class:Game
+statistics	py/temp.py	/^import random, statistics, math$/;"	i
+swallow	.scripts/bspswallow	/^swallow() {$/;"	f
+sys	games/HFOLorig/HFOL.py	/^import pygame, sys$/;"	i
+sys	games/HFOLorig/circle.py	/^import pygame, sys$/;"	i
+sys	games/HFOLorig/new.py	/^import pygame, sys$/;"	i
+sys	games/dino/dino.py	/^import pygame, sys$/;"	i
+sys	games/pong/pong.py	/^import pygame, sys$/;"	i
+sys	games/rectdrag/rect.py	/^import pygame, sys$/;"	i
+sys	games/test/test.py	/^import pygame, sys$/;"	i
+tans	Fortran/somethin.f95	/^    real(kind=4), dimension(5) :: angles, rads, sins, coss, tans,/;"	v	program:yes
+temp	.scripts/b.sh	/^temp() {$/;"	f
+temp	.scripts/b2.sh	/^temp() {$/;"	f
+theme	games/pong/pong.py	/^    def theme(self):$/;"	m	class:Game
+this	games/rectdrag/rect.py	/^this = pygame.Surface((50,50))$/;"	v
+time1	games/HFOLorig/HFOL.py	/^    time1 = pygame.time.get_ticks()$/;"	v
+time1	games/HFOLorig/HFOL.py	/^time1 = 0$/;"	v
+time1	games/HFOLorig/new.py	/^    time1 = pygame.time.get_ticks()$/;"	v
+time1	games/HFOLorig/new.py	/^time1 = 0$/;"	v
+time1	games/dino/dino.py	/^    time1=pygame.time.get_ticks()$/;"	v
+time1	games/dino/dino.py	/^time1 = 0$/;"	v
+time1	games/pong/pong.py	/^    time1 = pygame.time.get_ticks()$/;"	v
+time1	games/rectdrag/rect.py	/^    time1 = pygame.time.get_ticks()$/;"	v
+title	games/pong/pong.py	/^title = pygame.font.Font(None, 40)$/;"	v
+trig	Fortran/somethin.f95	/^    character :: k*30, j*15, trig*/;"	v	program:yes
+vel	games/rectdrag/rect.py	/^vel = 0.5$/;"	v
+vol	.scripts/b.sh	/^vol(){$/;"	f
+vol	.scripts/b2.sh	/^vol(){$/;"	f
+wifi	.scripts/b.sh	/^wifi(){$/;"	f
+wifi	.scripts/b2.sh	/^wifi(){$/;"	f
+window	.scripts/b.sh	/^window(){$/;"	f
+window	.scripts/b2.sh	/^window(){$/;"	f
+window	games/HFOLorig/HFOL.py	/^window = pygame.display.set_mode((960,540))$/;"	v
+window	games/HFOLorig/circle.py	/^window = pygame.display.set_mode((400,400))$/;"	v
+window	games/HFOLorig/new.py	/^window = pygame.display.set_mode((960,540))$/;"	v
+window	games/dino/dino.py	/^window = pygame.Surface((400,300))$/;"	v
+window	games/pong/pong.py	/^window = pygame.Surface((400,300))$/;"	v
+window	games/rectdrag/rect.py	/^window = pygame.display.set_mode((800,600))$/;"	v
+x	Fortran/new.f95	/^    real :: x(/;"	v	program:menuloop
+x	games/rectdrag/rect.py	/^x=0$/;"	v
+x	games/test/test.py	/^x=1$/;"	v
+y	Fortran/new.f95	/^    real :: x(10),y(/;"	v	program:menuloop
+yes	Fortran/somethin.f95	/^program yes$/;"	p
+z	Fortran/new.f95	/^    real :: x(10),y(2,2),z(/;"	v	program:menuloop
