@@ -31,7 +31,7 @@ vol(){
 
 wifi(){
    a=$(nmcli connection | grep -E "wlan0" | cut --characters\=1-23)
-   [ -z $a ] && echo "Disconnected" || echo $a
+   [ -z "$a" ] && echo "Disconnected" || echo $a
 }
 
 while  true
