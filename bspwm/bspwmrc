@@ -30,6 +30,7 @@ bspc config pointer_action1 move
 # rules for application
 bspc rule -a discord desktop='^3'  
 bspc rule -a qutebrowser desktop='^3'  
+bspc rule -a krita desktop='^3'  
 bspc rule -a Chromium-browser desktop='^3'
 bspc rule -a chromium desktop='^3'
 bspc rule -a Thunar state=floating 
