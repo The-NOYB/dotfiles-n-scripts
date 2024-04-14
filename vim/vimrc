@@ -42,15 +42,17 @@ set mat=2
 set path+=**
 set splitright
 set splitbelow
-set tabstop=4 shiftwidth=4 expandtab
+"set tabstop=4 shiftwidth=4 expandtab
 set <a-cr>=^[^M
 set omnifunc=syntaxcomplete#Complete
+
 autocmd Filetype fortran setlocal makeprg=/bin/gfortran 
 autocmd Filetype fortran setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd Filetype python xnoremap <leader>c :norm i#<CR>
+autocmd Filetype fortran xnoremap <leader>c :norm i!<CR>
+autocmd Filetype fortran xnoremap <leader>c :norm i!<CR>
 autocmd BufWritePost *.tex setlocal spell
-"autocmd Filetype markdown inoremap * **<Left>
-"autocmd Filetype markdown map <F5> :!pandoc<space><C-r>%<space>-o<space><C-r>%.pdf<Enter><Enter>
-"autocmd VimEnter * NERDTree | wincmd p
+
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap / :set hlsearch<CR>/
 nnoremap <CR> :nohlsearch<CR>
@@ -63,6 +65,7 @@ inoremap ' ''<Left>
 inoremap [ []<Left>
 inoremap ( ()<Left>
 inoremap { {}<Left>
+xnoremap <leader>u :norm x<CR>
 "map <F5> :make %<CR>
 command W w
 command Q q
