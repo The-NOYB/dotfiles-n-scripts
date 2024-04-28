@@ -46,16 +46,17 @@ set tabstop=4 shiftwidth=4 expandtab
 set <a-cr>=^[^M
 set omnifunc=syntaxcomplete#Complete
 
+"|| ! (clear && time ./.%<)
+autocmd Filetype c xnoremap <leader>c :norm i//<CR>
+autocmd Filetype c nnoremap <F5> :! clear; gcc % -o %< && time ./%<<CR>
 
-autocmd Filetype c setlocal makeprg=/bin/gcc 
-autocmd Filetype c xnoremap <leader>c :norm i\/<CR>
-
-autocmd Filetype fortran setlocal makeprg=/bin/gfortran 
 autocmd Filetype fortran xnoremap <leader>c :norm i!<CR>
-autocmd Filetype fortran xnoremap <leader>c :norm i!<CR>
+autocmd Filetype fortran nnoremap <F5> :! clear; gfortran % -o %< && time ./%<<CR>
 
 autocmd Filetype python xnoremap <leader>c :norm i#<CR>
-"autocmd Filetype python setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd Filetype python nnoremap <F5> :! clear; runpy %<CR>
+autocmd Filetype python nnoremap <F2> :nnoremap <F5> :!clear; runpyg %i\ <CR>
+
 autocmd BufWritePost *.tex setlocal spell
 
 nnoremap <leader>n :NERDTreeFocus<CR>
