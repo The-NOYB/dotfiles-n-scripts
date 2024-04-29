@@ -55,7 +55,7 @@ autocmd Filetype fortran nnoremap <F5> :! clear; gfortran % -o %< && time ./%<<C
 
 autocmd Filetype python xnoremap <leader>c :norm i#<CR>
 autocmd Filetype python nnoremap <F5> :! clear; runpy %<CR>
-autocmd Filetype python nnoremap <F2> :nnoremap <F5> :!clear; runpyg %i\ <CR>
+autocmd Filetype python nnoremap <F6> :! clear; runpyg %<CR>
 
 autocmd BufWritePost *.tex setlocal spell
 
