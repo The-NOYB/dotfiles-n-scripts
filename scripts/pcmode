@@ -6,7 +6,7 @@ mode=$(printf "resall\nall\ncomp\nexit" | dmenu -sb "dark green")
 [ $mode == "resall" ] && xrandr --output eDP-1 --scale 0.6667x0.6667 && mode="all"
 [ $mode == "all" ] && killall -q lemonbar && killall -q b.sh && bspc config top_padding 7 && mode="comp"
 [ $mode == "comp" ] && killall -q picom
-[ $mode == "exit" ] && xrandr --output eDP-1 --scale 1x1 && killall -q pcmode && lemonstart && b.sh | lemonbar -p -B#1F1D19 -F#DEDEDE -u 3  -f "monospace-10" -g x27 | $SHELL
+[ $mode == "exit" ] && xrandr --output eDP-1 --scale 1x1 && bspc quit && killall -q pcmode 
 
 # doesnt work properly as only one statement can be true
 #case $mode in
