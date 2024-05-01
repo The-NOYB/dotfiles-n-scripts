@@ -47,7 +47,10 @@ set <a-cr>=^[^M
 set omnifunc=syntaxcomplete#Complete
 
 "|| ! (clear && time ./.%<)
+xnoremap <leader>u :norm x<CR>
+
 autocmd Filetype c xnoremap <leader>c :norm i//<CR>
+autocmd Filetype c xnoremap <leader>c :norm 2x<CR>
 autocmd Filetype c nnoremap <F5> :! clear; gcc % -o %< && time ./%<<CR>
 
 autocmd Filetype fortran xnoremap <leader>c :norm i!<CR>
@@ -71,7 +74,6 @@ inoremap ' ''<Left>
 inoremap [ []<Left>
 inoremap ( ()<Left>
 inoremap { {}<Left>
-xnoremap <leader>u :norm x<CR>
 "map <F5> :make %<CR>
 command W w
 command Q q
