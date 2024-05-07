@@ -50,7 +50,7 @@ set omnifunc=syntaxcomplete#Complete
 xnoremap <leader>u :norm x<CR>
 
 autocmd Filetype c xnoremap <leader>c :norm i//<CR>
-autocmd Filetype c xnoremap <leader>c :norm 2x<CR>
+autocmd Filetype c xnoremap <leader>u :norm 2x<CR>
 autocmd Filetype c nnoremap <F5> :! clear; gcc % -o %< && time ./%<<CR>
 
 autocmd Filetype fortran xnoremap <leader>c :norm i!<CR>
