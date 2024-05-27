@@ -7,5 +7,5 @@ int main() {
     double a,b,c;
     char l,m,n;
 
-    return 0
+    return 0;
 }

@@ -66,7 +66,7 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap / :set hlsearch<CR>/
 nnoremap <CR> :nohlsearch<CR>
 nnoremap <leader>for :-1read /home/noyb/.config/vim/fortstr.txt<CR>2ecl
-nnoremap <leader>cst :-1read /home/noyb/.config/vim/cstc.txt<CR>2ecl
+nnoremap <leader>cst :-1read /home/noyb/.config/vim/cstc.txt<CR>8ji
 nnoremap <leader>pyc :-1read /home/noyb/.config/vim/pyclass.txt<CR>2ecl
 nnoremap <leader>pyqt :-1read /home/noyb/.config/vim/pyqt.txt<CR>5ji
 inoremap " ""<Left>
