@@ -49,6 +49,14 @@ set omnifunc=syntaxcomplete#Complete
 "|| ! (clear && time ./.%<)
 xnoremap <leader>u :norm x<CR>
 
+autocmd BufReadPost,BufNewFile *.tex setfiletype=tex
+autocmd Filetype tex setlocal spell
+autocmd Filetype tex nnoremap <F5> :!clear; pdflatex % && evince %<.pdf<CR>
+
+autocmd Filetype arduino xnoremap <leader>c :norm i//<CR>
+autocmd Filetype arduino xnoremap <leader>u :norm 2x<CR>
+autocmd Filetype arduino nnoremap <F5> :! clear; arduino-cli compile --fqbn esp32:esp32:nodemcu-32s ../%<<CR>
+
 autocmd Filetype c xnoremap <leader>c :norm i//<CR>
 autocmd Filetype c xnoremap <leader>u :norm 2x<CR>
 autocmd Filetype c nnoremap <F5> :! clear; gcc % -o %< && time ./%<<CR>
@@ -60,7 +68,6 @@ autocmd Filetype python xnoremap <leader>c :norm i#<CR>
 autocmd Filetype python nnoremap <F6> :! clear; runpy %<CR>
 autocmd Filetype python nnoremap <F5> :! clear; runpyg %<CR>
 
-autocmd BufWritePost *.tex setlocal spell
 
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap / :set hlsearch<CR>/
