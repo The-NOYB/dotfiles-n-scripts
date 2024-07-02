@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[ -n $1 ] && cur=$1
+[ -n $1 ] && cur=$1 || cur=0
 [ -n $2 ] && finl=$2
 
 [ -n $cur ] && while true; do read a; [ -z $a ] && cur=$(($cur + 1)); printf "rn on: $cur\t" & date; done
