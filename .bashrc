@@ -47,4 +47,4 @@ alias nettest='curl parrot.live'
 alias clearswap='rm /home/noyb/.local/state/vim/swap/*'
 alias known-networks='nmcli connection'
 alias screenoff='sleep 0.5 && xset dpms force off'
-
+alias modin='cd ~/make/WorkshopDLv2.0.0/steamcmd/steamapps/workshop/content/1281930'
