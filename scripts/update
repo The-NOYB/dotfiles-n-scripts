@@ -1,5 +1,7 @@
 #!/bin/bash
 
+pgrep pmode && exit 1
+
 notify-send "Updating dotfiles-n-scripts"
 
 # vars
