@@ -24,12 +24,12 @@ temp=$(($(cat /sys/class/thermal/thermal_zone0/temp)/1000));
 mem=$(($(free | awk '/^Mem:/{print $3}')/1024));
 batt=$(cat /sys/class/power_supply/BAT1/status)
 charg=$(cat /sys/class/power_supply/BAT1/capacity)
+sleep 10;
 
 [ ${batt:0:1} == "D" ] && notify-send -u critical "Warning laptop not charging $(cat /sys/class/power_supply/BAT1/capacity)% $(date "+%H:%M")";
 [ $mem -gt 5800 ] && notify-send "memory usage is high: $(free -h | awk '/^Mem:/{print $3"/"$2}') $(date "+%H:%M")";
 [ $temp -gt 79 ] && notify-send "temp is high: $temp°C $(date "+%H:%M")";
-[ $time -gt 60 ]
-time=$(($time + 10))
-sleep 10;
+[ $(($time%600)) == 0 ] && notify-send "Current Session: $((time/60)) mins";
 
+time=$(($time + 10))
 done
