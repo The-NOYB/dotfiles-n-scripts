@@ -41,6 +41,6 @@
     </property>
   </property>
   <property name="Notify" type="int" value="1"/>
-  <property name="IdentityPopups" type="bool" value="false"/>
+  <property name="IdentityPopups" type="bool" value="true"/>
   <property name="AutoEnableProfiles" type="bool" value="false"/>
 </channel>
