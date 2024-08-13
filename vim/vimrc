@@ -59,7 +59,8 @@ autocmd Filetype arduino nnoremap <F5> :! clear; arduino-cli compile --fqbn esp3
 
 autocmd Filetype c xnoremap <leader>c :norm i//<CR>
 autocmd Filetype c xnoremap <leader>u :norm 2x<CR>
-autocmd Filetype c nnoremap <F5> :! clear; gcc % -o %< && time ./%<<CR>
+autocmd Filetype c nnoremap <F5> :! clear; gcc % -o %<  && time ./%<<CR>
+autocmd Filetype c nnoremap <F6> :! clear; gcc -lglfw -lvulkan -lX11 -lpthread -lXrandr -ldl % -o %< && time ./%<<CR>
 
 autocmd Filetype fortran xnoremap <leader>c :norm i!<CR>
 autocmd Filetype fortran nnoremap <F5> :! clear; gfortran % -o %< && time ./%<<CR>
