@@ -37,7 +37,7 @@ settings:
   content.media.video_capture:
     https://discord.com: true
   content.pdfjs:
-    global: true
+    global: false
   content.proxy:
     global: system
   content.register_protocol_handler:
