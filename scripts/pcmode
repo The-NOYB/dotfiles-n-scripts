@@ -27,8 +27,8 @@ charg=$(cat /sys/class/power_supply/BAT1/capacity)
 sleep 10;
 
 [ ${batt:0:1} == "D" ] && notify-send -u critical "Warning laptop not charging $(cat /sys/class/power_supply/BAT1/capacity)% $(date "+%H:%M")";
-[ $mem -gt 5800 ] && notify-send "memory usage is high: $(free -h | awk '/^Mem:/{print $3"/"$2}') $(date "+%H:%M")";
-[ $temp -gt 79 ] && notify-send "temp is high: $temp°C $(date "+%H:%M")";
+[ $mem -gt 5950 ] && notify-send "memory usage is high: $(free -h | awk '/^Mem:/{print $3"/"$2}') $(date "+%H:%M")";
+[ $temp -gt 78 ] && notify-send "temp is high: $temp°C $(date "+%H:%M")";
 [ $(($time%120)) == 0 ] && notify-send "Current Session: $((time/60)) mins";
 
 time=$(($time + 10))
