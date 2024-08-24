@@ -30,7 +30,6 @@ syntax on
 filetype plugin on
 set number
 set relativenumber
-set ai
 set ruler
 set cursorline
 set shellcmdflag=-ic
@@ -42,9 +41,9 @@ set mat=2
 set path+=**
 set splitright
 set splitbelow
-set tabstop=4 shiftwidth=4 expandtab
 set <a-cr>=^[^M
 set omnifunc=syntaxcomplete#Complete
+set tabstop=4 shiftwidth=4 expandtab
 
 "|| ! (clear && time ./.%<)
 xnoremap <leader>u :norm x<CR>
