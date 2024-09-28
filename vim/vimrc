@@ -54,7 +54,8 @@ autocmd Filetype tex nnoremap <F5> :!clear; pdflatex % && evince %<.pdf<CR>
 
 autocmd Filetype arduino xnoremap <leader>c :norm i//<CR>
 autocmd Filetype arduino xnoremap <leader>u :norm 2x<CR>
-autocmd Filetype arduino nnoremap <F5> :! clear; arduino-cli compile --fqbn esp32:esp32:nodemcu-32s ../%< && arduino-cli upload -p /dev/ttyACM0 --fqbn esp32:esp32:nodemcu-32s ../%<<CR>
+"autocmd Filetype arduino nnoremap <F5> :! clear; arduino-cli compile --fqbn esp32:esp32:nodemcu-32s ../%< && arduino-cli upload -p /dev/ttyACM0 --fqbn esp32:esp32:nodemcu-32s ../%<<CR>
+autocmd Filetype arduino nnoremap <F5> :! clear; arduino-cli compile --fqbn arduino:avr:nano ../%< && arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:nano ../%<<CR>
 
 autocmd Filetype c xnoremap <leader>c :norm i//<CR>
 autocmd Filetype c xnoremap <leader>u :norm 2x<CR>
