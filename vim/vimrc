@@ -37,6 +37,7 @@ set smartcase
 set hlsearch
 set incsearch
 set showmatch
+set wildmenu
 set mat=2
 set path+=**
 set splitright
