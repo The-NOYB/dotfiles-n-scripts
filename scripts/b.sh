@@ -30,7 +30,7 @@ vol(){
 }
 
 wifi(){
-   a=$(nmcli connection | grep -E "wlan0" | cut --characters\=1-23)
+   a=$(nmcli connection | grep -E "wlan0|eth0" | cut --characters\=1-23 | sed -n 1p)
    [ -z "$a" ] && echo "Disconnected" || echo $a
 }
 
