@@ -29,6 +29,7 @@ augroup END
 syntax on
 filetype plugin on
 set number
+set ignorecase
 set relativenumber
 set ruler
 set cursorline
