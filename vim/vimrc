@@ -59,7 +59,7 @@ autocmd Filetype tex nnoremap <leader>l :norm 0v$hS$<CR>
 
 autocmd Filetype arduino xnoremap <leader>c :norm i//<CR>
 autocmd Filetype arduino xnoremap <leader>u :norm 2x<CR>
-autocmd Filetype arduino nnoremap <F5> :! clear; arduino-cli compile --fqbn arduino:avr:nano --board-options "cpu=atmega328old" ../%< && arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:nano ../%<<CR>
+autocmd Filetype arduino nnoremap <F5> :! clear; arduino-cli compile --fqbn arduino:avr:nano:cpu=atmega328old ../%< && arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:nano ../%<<CR>
 autocmd Filetype arduino nnoremap <F6> :! clear; arduino-cli compile --fqbn esp32:esp32:nodemcu-32s ../%< && arduino-cli upload -p /dev/ttyUSB0 --fqbn esp32:esp32:nodemcu-32s ../%<<CR>
 
 autocmd Filetype c xnoremap <leader>c :norm i//<CR>
