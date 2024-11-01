@@ -24,7 +24,7 @@ temp=$(($(cat /sys/class/thermal/thermal_zone0/temp)/1000));
 mem=$(($(free | awk '/^Mem:/{print $3}')/1024));
 batt=$(cat /sys/class/power_supply/BAT1/status)
 charg=$(cat /sys/class/power_supply/BAT1/capacity)
-sleep 10;
+sleep 20;
 
 [ ${batt:0:1} == "D" ] && notify-send -u critical "Warning laptop not charging $(cat /sys/class/power_supply/BAT1/capacity)% $(date "+%H:%M")";
 [ $mem -gt 5950 ] && notify-send "memory usage is high: $(free -h | awk '/^Mem:/{print $3"/"$2}') $(date "+%H:%M")";
