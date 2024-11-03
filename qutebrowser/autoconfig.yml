@@ -11,7 +11,6 @@ settings:
       normal:
         '!ds': open https://discord.com/channels/@me
         '!gm': open https://mail.google.com/mail/u/0/h/1pq68r75kzvdr/?v%3Dlui
-        '!gn': open https://bmsitm.gnums.in/Login.aspx
         '!go': open google.com
         '!gt': open https://github.com/The-NOYB
         '!gw': open https://groww.in/stocks/user/investments
