@@ -4,8 +4,8 @@ mode=$(printf "resall\nall\ncomp\nclose" | dmenu -sb "dark green")
 time=0
 
 [ -z $mode ] && exit 1
-#[ $mode == "resall" ] && xrandr --output eDP-1 --scale 0.5333x0.5333 && mode="all" # this is for 1024 x 576
-[ $mode == "resall" ] && xrandr --output eDP-1 --scale 0.6667x0.6667 && mode="all" # this one was for uh...1280 x 720
+[ $mode == "resall" ] && xrandr --output eDP-1 --scale 0.5333x0.5333 && mode="all" # this is for 1024 x 576
+#[ $mode == "resall" ] && xrandr --output eDP-1 --scale 0.6667x0.6667 && mode="all" # this one was for uh...1280 x 720
 [ $mode == "all" ] && killall -q lemonbar && killall -q b.sh && bspc config top_padding 7 && mode="comp"
 [ $mode == "comp" ] && killall -q picom
 [ $mode == "close" ] && xrandr --output eDP-1 --scale 1x1 && bspc quit && killall -q pcmode 
