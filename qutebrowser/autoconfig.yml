@@ -42,6 +42,8 @@ settings:
     global: system
   content.register_protocol_handler:
     https://mail.google.com?extsrc=mailto&url=%25s: true
+  url.default_page:
+    global: google.com
   url.searchengines:
     global:
       DEFAULT: https://www.google.com/search?q={}
