@@ -23,6 +23,7 @@ settings:
         '!yt': open youtube.com
         ',M': hint links spawn vlc {hint-url}
         <Ctrl+w>: null
+        ci: hint images download
         gh: home
   colors.webpage.darkmode.enabled:
     global: false
