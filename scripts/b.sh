@@ -26,7 +26,7 @@ d(){
 }
 
 vol(){
-   amixer | grep -q 'off' && echo "off%{-u}" || echo "`amixer get Master | sed -n 's/^.*\[\([0-9]\+\)%.*$/\1/p'| uniq`%%{-u}" 
+   amixer | grep -q 'off' && echo "off%{-u}" || echo "`amixer get Master | sed -n 's/^.*Le.*\[\([0-9]\+\)%.*$/\1/p'| uniq`%%{-u}" 
 }
 
 wifi(){
