@@ -128,7 +128,7 @@ XSysinfo*.BarGauge.background:  white
 
 !!! urxvt-256color
 !
-urxvt-256color.font:xft:Terminus (TTF)-Bold:pixelsize=19
+urxvt-256color.font:xft:Terminus (TTF)-Bold:pixelsize=21
 urxvt-256color.letterspace:1 
 urxvt-256color.scrollBar:	false
 urxvt-256color.saveLines:	4096
