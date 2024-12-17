@@ -31,5 +31,5 @@ sleep 20;
 [ $temp -gt 78 ] && notify-send "temp is high: $temp°C $(date "+%H:%M")";
 [ $(($time%120)) == 0 ] && notify-send "Current Session: $((time/60)) mins";
 
-time=$(($time + 10))
+time=$(($time + 20))
 done
