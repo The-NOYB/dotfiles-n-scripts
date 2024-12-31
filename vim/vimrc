@@ -46,6 +46,7 @@ set splitbelow
 set <a-cr>=^[^M
 set omnifunc=syntaxcomplete#Complete
 set tabstop=4 shiftwidth=4 expandtab
+set foldopen-=search
 
 "|| ! (clear && time ./.%<)
 xnoremap <leader>u :norm x<CR>
