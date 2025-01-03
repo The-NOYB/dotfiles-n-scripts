@@ -99,7 +99,7 @@ super + alt + bracket{left,right}
 
 # send the newest marked node to the newest preselected node
 super + b 
-        bspc node newest.marked.local -n newest.!automatic.local
+         bspc node -g marked && bspc node newest.marked.local -n newest.!automatic.local
 
 # screenshot
 super + shift + s
