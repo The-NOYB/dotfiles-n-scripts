@@ -5,6 +5,8 @@
     <property name="navigationbar" type="empty">
       <property name="position" type="string" value="left"/>
     </property>
+    <property name="height" type="uint" value="1019"/>
+    <property name="width" type="uint" value="932"/>
   </property>
   <property name="errors" type="empty">
     <property name="missing-thumbnailer" type="bool" value="false"/>

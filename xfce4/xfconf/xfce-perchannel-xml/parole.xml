@@ -5,12 +5,12 @@
     <property name="font" type="string" value="Sans Bold 20"/>
   </property>
   <property name="folders" type="empty">
-    <property name="last-used-media" type="string" value="/run/media/noyb/C8EC-2F7C"/>
+    <property name="last-used-media" type="string" value="/home/noyb/Downloads"/>
   </property>
   <property name="window" type="empty">
     <property name="maximized" type="bool" value="false"/>
-    <property name="width" type="int" value="933"/>
-    <property name="height" type="int" value="1019"/>
+    <property name="width" type="int" value="1912"/>
+    <property name="height" type="int" value="1042"/>
   </property>
   <property name="audio" type="empty">
     <property name="volume" type="int" value="50"/>

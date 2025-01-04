@@ -1,4 +1,5 @@
 WebBrowser=custom-WebBrowser
 TerminalEmulator=custom-TerminalEmulator
 TerminalEmulatorDismissed=true
+MailReader=custom-MailReader
 

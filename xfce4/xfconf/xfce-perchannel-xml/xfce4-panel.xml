@@ -72,7 +72,7 @@
     <property name="plugin-1" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="mpris-players" type="string" value="chromium.instance3258;chromium.instance8023;qutebrowser.instance2395;qutebrowser.instance2644;qutebrowser.instance2723;qutebrowser.instance2924;qutebrowser.instance32548;qutebrowser.instance4719;vlc"/>
-      <property name="known-players" type="string" value="Chromium;vlc"/>
+      <property name="known-players" type="string" value="Chromium;qutebrowser;vlc"/>
     </property>
     <property name="plugin-2" type="string" value="actions">
       <property name="style" type="empty"/>
@@ -145,16 +145,16 @@
         <value type="string" value="xfce4-terminal-emulator.desktop"/>
       </property>
       <property name="recent" type="array">
-        <value type="string" value="YaST2-org.opensuse.yast.Timezone.desktop"/>
-        <value type="string" value="org.opensuse.YaST.desktop"/>
+        <value type="string" value="xfce4-mime-settings.desktop"/>
         <value type="string" value="chromium-browser.desktop"/>
-        <value type="string" value="xfce-display-settings.desktop"/>
-        <value type="string" value="xfce-settings-manager.desktop"/>
-        <value type="string" value="xfce4-terminal-emulator.desktop"/>
-        <value type="string" value="YaST2-org.opensuse.yast.OnlineUpdate.desktop"/>
-        <value type="string" value="org.guido-berhoerster.code.package-update-indicator.preferences.desktop"/>
-        <value type="string" value="org.xfce.ristretto.desktop"/>
-        <value type="string" value="xfce4-settings-editor.desktop"/>
+        <value type="string" value="xfce4-session-logout.desktop"/>
+        <value type="string" value="chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop"/>
+        <value type="string" value="Arduino.desktop"/>
+        <value type="string" value="net.lutris.Lutris.desktop"/>
+        <value type="string" value="org.gnome.Calculator.desktop"/>
+        <value type="string" value="gucharmap.desktop"/>
+        <value type="string" value="org.xfce.mousepad.desktop"/>
+        <value type="string" value="wine-notepad.desktop"/>
       </property>
       <property name="menu-width" type="int" value="590"/>
       <property name="menu-height" type="int" value="1049"/>
