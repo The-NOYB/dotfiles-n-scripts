@@ -26,8 +26,14 @@ super + alt + {q,r}
 super + q 
 	bspc node -c
 
+# just trolling
 alt + F4
 	notify-send "lmao" #bspc node -k
+
+# disabling laptop keyboard (uncomment if insane)
+#alt + k
+#    keyboard_toggle
+
 # alternate between the tiled and monocle layout
 super + m
 	bspc desktop -l next

@@ -7,6 +7,8 @@ b.sh | lemonbar -p -B#1F1D19 -F#DEDEDE -u 3  -f "monospace-10" -g x27 | $SHELL &
 numlockx on &
 picom --experimental-backend --vsync &
 pidof bspswallow || bspswallow &
+xinput --set-prop 'pointer:''Logitech USB Optical Mouse' 'libinput Accel Speed' -0.1 &
+xinput --set-prop 'pointer:''Logitech USB Optical Mouse' 'libinput Accel Profile Enabled' 0, 1 &
 #var=$(xinput | grep Tou | awk '{print $6}') && var=${var##id=} && xinput --disable $var &
 
 # bspwm configs

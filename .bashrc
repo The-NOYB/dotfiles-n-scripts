@@ -50,3 +50,4 @@ alias modin='cd ~/make/WorkshopDLv2.0.0/steamcmd/steamapps/workshop/content/1281
 alias study_time='time=0 && while true; do time=$(($time+10));sleep 600 && notify-send "You can do it! ($time mins)";done'
 alias nohist='set +o history'
 alias earphones='bluetoothctl power on && bluetoothctl connect C5:5C:08:04:11:D0 && pactl set-sink-port 0 analog-output-headphones'
+alias safe_wallpaper='xwallpaper --center Pictures/stray-game--hd-wallpaper-uhdpaper.com-506@0@h.jpg'

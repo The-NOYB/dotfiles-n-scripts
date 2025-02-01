@@ -1,0 +1,9 @@
+#!/bin/bash
+
+keyboard_id=$(xinput | grep rans | awk '{print $7}') 
+
+keyboard_id=${keyboard_id#*=}
+
+isenabled=$(xinput --list-props $keyboard_id | grep "Device Enabled" | awk '{print $4}')
+
+[ $isenabled == 0 ] && xinput --enable $keyboard_id || xinput --disable $keyboard_id
