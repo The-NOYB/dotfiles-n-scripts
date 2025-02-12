@@ -51,3 +51,4 @@ alias study_time='time=0 && while true; do time=$(($time+10));sleep 600 && notif
 alias nohist='set +o history'
 alias earphones='bluetoothctl power on && bluetoothctl connect C5:5C:08:04:11:D0 && pactl set-sink-port 0 analog-output-headphones'
 alias safe_wallpaper='xwallpaper --center Pictures/stray-game--hd-wallpaper-uhdpaper.com-506@0@h.jpg'
+alias mouse='xinput --set-prop "pointer:""Logitech USB Optical Mouse" "libinput Accel Speed" -0.1 && xinput --set-prop "pointer:""Logitech USB Optical Mouse" "libinput Accel Profile Enabled" 0, 1'
