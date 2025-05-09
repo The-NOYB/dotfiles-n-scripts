@@ -1,0 +1,14 @@
+#!/bin/bash
+
+choice=$(($RANDOM%3))
+
+case $choice in
+    0)
+      xlock -mode matrix & screenoff;;
+    1)
+      xlock -mode pyro2 & screenoff;;
+    2)
+      xlock -mode pyro & screenoff;;
+esac
+
+

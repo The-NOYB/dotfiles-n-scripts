@@ -10,6 +10,7 @@ settings:
     global:
       normal:
         '!ds': open https://discord.com/channels/@me
+        '!dt': open https://dart.dev/docs
         '!gm': open https://mail.google.com/mail/u/0/h/1pq68r75kzvdr/?v%3Dlui
         '!go': open google.com
         '!gt': open https://github.com/The-NOYB
@@ -25,10 +26,16 @@ settings:
         <Ctrl+w>: null
         ci: hint images download
         gh: home
+  colors.webpage.darkmode.algorithm:
+    global: lightness-cielab
   colors.webpage.darkmode.enabled:
     global: false
+  colors.webpage.darkmode.policy.page:
+    global: smart
   colors.webpage.preferred_color_scheme:
     global: dark
+  content.autoplay:
+    global: false
   content.geolocation:
     global: true
     https://education.github.com: true
@@ -37,16 +44,24 @@ settings:
     https://discord.com: true
   content.media.video_capture:
     https://discord.com: true
+  content.notifications.enabled:
+    https://web.tolstoycomments.com: false
   content.pdfjs:
     global: false
   content.proxy:
     global: system
   content.register_protocol_handler:
     https://mail.google.com?extsrc=mailto&url=%25s: true
+  downloads.location.prompt:
+    global: false
+  qt.chromium.low_end_device_mode:
+    global: always
+  qt.force_software_rendering:
+    global: chromium
   url.default_page:
     global: google.com
   url.searchengines:
     global:
-      DEFAULT: https://www.google.com/search?q={}
+      DEFAULT: https://yandex.com/search/?text={}
   url.start_pages:
     global: https://google.com

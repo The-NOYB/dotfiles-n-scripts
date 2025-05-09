@@ -10,7 +10,7 @@ battery() {
 }
 
 window(){
-    xprop -id `bspc query -N -n .window.focused` | awk '/^WM_CLASS/{print $4}'| tr -d \" | cut -c -40 
+    focused=$(bspc query -N -n .window.focused) && xprop -id $focused | awk '/^WM_CLASS/{print $4}'| tr -d \" | cut -c -40
 }
 
 mem() {
@@ -26,17 +26,18 @@ d(){
 }
 
 vol(){
-   amixer | grep -q 'off' && echo "off%{-u}" || echo "`amixer get Master | sed -n 's/^.*Le.*\[\([0-9]\+\)%.*$/\1/p'| uniq`%%{-u}" 
+   volume=$(pamixer --get-volume-human) && [ $volume == "muted" ] && echo "off" || echo $volume
+#   amixer | grep -q 'off' && echo "off%{-u}" || echo "`amixer get Master | sed -n 's/^.*Le.*\[\([0-9]\+\)%.*$/\1/p'| uniq`%%{-u}" 
 }
 
 wifi(){
-   a=$(nmcli connection | grep -E "wlan0|eth0" | cut --characters\=1-23 | sed -n 1p)
+   a=$(nmcli connection | grep -E "wlan0|eth0|eth1" | cut --characters\=1-17 | sed -n 1p)
    [ -z "$a" ] && echo "Disconnected" || echo $a
 }
 
 while  true
 do
-    BAR_INPUT="%{l}%{U#247948} %{F#23ba67}┃%{F}$(d) %{F#23ba67}┃┃ %{F} %{+u}$(window)%{-u}%{U} %{c} %{B#23ba67}%{F#1F1D19} $(clock) %{r}%{F}%{B}%{U#247948}%{F#23ba67} ┃ ↑↓ %{F}%{+u}$(wifi)%{-u} %{F#23ba67} ┃ λ %{F}%{+u}$(vol) %{F#23ba67} ┃ Δ %{F}%{+u}$(temp)%{-u} %{F#23ba67} ┃ Ξ %{F}%{+u}$(mem)%{-u} %{F#23ba67} ┃ ± %{F}%{+u}$(battery)%{-u} %{F#23ba67} ┃ %{F}%{U}%{F}%{A:~/.local/bin/off:}:~:%{A} %{}"
+    BAR_INPUT="%{l}%{U#247948} %{F#23ba67}┃%{F}$(d) %{F#23ba67}┃┃ %{F} %{+u}$(window)%{-u}%{U} %{c} %{B#23ba67}%{F#1F1D19} $(clock) %{r}%{F}%{B}%{U#247948}%{F#23ba67} ┃ ↑↓ %{F}%{+u}$(wifi)%{-u} %{F#23ba67} ┃ λ %{F}%{+u}$(vol)%{-u} %{F#23ba67} ┃ Δ %{F}%{+u}$(temp)%{-u} %{F#23ba67} ┃ Ξ %{F}%{+u}$(mem)%{-u} %{F#23ba67} ┃ ± %{F}%{+u}$(battery)%{-u} %{F#23ba67} ┃ %{F}%{U}%{F}%{A:~/.local/bin/off:}:~:%{A} %{}"
     echo $BAR_INPUT
     sleep 1
 done

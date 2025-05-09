@@ -1,8 +1,13 @@
 #!/bin/bash
+
 mountable=$(ls /dev/disk/by-label/) 
+
 choose=$(echo "$mountable" | dmenu -sb "dark green" -p "Which Drive?")
+
 [[ "$choose" = "" ]] && exit 1
 dirs=$(find /mnt -maxdepth 1 | grep -v "/mnt$")
+
 mountpoint=$(echo "$dirs" | dmenu -sb "dark green" -p "Mount $choose to where?")
+
 [[ "$mountpoint" = "" ]] && exit 1
 sudo mount /dev/disk/by-label/$choose $mountpoint && notify-send "$choose has been mounted to $mountpoint"

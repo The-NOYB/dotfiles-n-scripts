@@ -1,14 +1,18 @@
 #! /bin/bash
 
 # startup programs
-xwallpaper --center ~/Pictures/steampunker_wallpp.png &
+xwallpaper --center ~/Pictures/omni-man-invincible-series-art-hd-wallpaper-uhdpaper.com-132@1@n.jpg &
 pgrep -x sxhkd > /dev/null || sxhkd &
 b.sh | lemonbar -p -B#1F1D19 -F#DEDEDE -u 3  -f "monospace-10" -g x27 | $SHELL &
-numlockx on &
-picom --experimental-backend &
+# numlockx on &
+picom &
 pidof bspswallow || bspswallow &
-xinput --set-prop 'pointer:''Logitech USB Optical Mouse' 'libinput Accel Speed' -0.1 &
-xinput --set-prop 'pointer:''Logitech USB Optical Mouse' 'libinput Accel Profile Enabled' 0, 1 &
+
+# mounting drives
+sudo mount /dev/disk/by-label/Games Games &
+sudo mount /dev/disk/by-label/VMs /mnt/C &
+sudo mount /dev/disk/by-label/Data\\x20waala /mnt/D &
+
 #var=$(xinput | grep Tou | awk '{print $6}') && var=${var##id=} && xinput --disable $var &
 
 # bspwm configs
@@ -34,6 +38,7 @@ bspc config pointer_action1 move
 bspc rule -a discord desktop='^3'  
 bspc rule -a KiCad desktop='^3'  
 bspc rule -a qutebrowser desktop='^3'  
+bspc rule -a surf desktop='^3' state=tiled
 bspc rule -a krita desktop='^3'  
 bspc rule -a Chromium-browser desktop='^3'
 bspc rule -a chromium desktop='^3'
