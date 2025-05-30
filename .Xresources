@@ -132,12 +132,14 @@ urxvt-256color.font:xft:Terminus (TTF)-Bold:pixelsize=21
 urxvt-256color.letterspace:1 
 urxvt-256color.scrollBar:	false
 urxvt-256color.saveLines:	4096
-urxvt-256color.perl-ext-common: keyboard-select,resize-font,url-select,clipboard
-urxvt-256color.keysym.M-Escape: perl:keyboard-select:activate
-urxvt-256color.keysym.M-u: perl:url-select:select_next
+urxvt-256color.perl-ext-common: default,matcher,keyboard-select,resize-font,url-select,clipboard
+urxvt-256color.keysym.M-Escape:   perl:keyboard-select:activate
 urxvt-256color.keysym.M-c:   perl:clipboard:copy
 urxvt-256color.keysym.M-v:   perl:clipboard:paste
-urxvt-256color.keysym.M-C-v: perl:clipboard:paste_escaped
+urxvt-256color.keysym.M-u: perl:url-select:select_next
+urxvt-256color.url-select.launcher: /usr/bin/xdg-open
+urxvt-256color.url-select.underline: true
+urxvt-256color.matcher.button: 1
 Xft*dpi:       100
 Xft*antialias: True
 Xft*hinting:   True
@@ -158,7 +160,7 @@ urxvt-256color.keysym.KP_8:      8
 urxvt-256color.keysym.KP_7:      7
 urxvt-256color.keysym.KP_9:      9
 urxvt-256color.keysym.KP_0:      0
-urxvt-256color.geometry:82x24
+urxvt-256color.geometry:75x20
 urxvt-256color.keysym.C-j:resize-font:smaller
 urxvt-256color.keysym.C-k:resize-font:bigger
 urxvt-256color.keysym.C-equal:resize-font:reset
@@ -167,40 +169,121 @@ urxvt-256color.keysym.M-l:reset
 urxvt-256color.keysym.M-f:ranger
 urxvt-256color.keysym.M-m:mount_drives
 
-! special
-*.foreground:   #ffdab9
-*.background:   #1d1312
-!1B0E00
-*.cursorColor:  #ffdab9
+!! special
+!*.foreground:   #ffdab9
+!*.background:   #1d1312
+!!1B0E00
+!*.cursorColor:  #ffdab9
+!
+!! black
+!*.color0:       #000000
+!*.color8:       #343434
+!
+!! red
+!*.color1:       #e92f2f
+!*.color9:       #e92f2f
+!
+!! green
+!*.color2:       #0ed839
+!*.color10:      #0ed839
+!
+!! yellow
+!*.color3:       #dddd13
+!*.color11:      #dddd13
+!
+!! blue
+!*.color4:       #3b48e3
+!*.color12:      #3b48e3
+!
+!! magenta
+!*.color5:       #f996e2
+!*.color13:      #f996e2
+!
+!! cyan
+!*.color6:       #23edda
+!*.color14:      #23edda
+!
+!! white
+!*.color7:       #ababab
+!*.color15:      #f9f9f9
 
-! black
-*.color0:       #000000
-*.color8:       #343434
+!!! GRUVBOX IS HERE
+! hard contrast: *background: #1d2021
+*background: #242424
+!! soft contrast: *background: #32302f
+*foreground: #ebdbb2
+!! Black + DarkGrey
+*color0:  #282828
+*color8:  #928374
+! DarkRed + Red
+*color1:  #cc241d
+*color9:  #fb4934
+! DarkGreen + Green
+*color2:  #98971a
+*color10: #b8bb26
+! DarkYellow + Yellow
+*color3:  #d79921
+*color11: #fabd2f
+! DarkBlue + Blue
+*color4:  #458588
+*color12: #83a598
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #d3869b
+! DarkCyan + Cyan
+*color6:  #689d6a
+*color14: #8ec07c
+! LightGrey + White
+*color7:  #a89984
+*color15: #ebdbb2
 
-! red
-*.color1:       #e92f2f
-*.color9:       #e92f2f
-
-! green
-*.color2:       #0ed839
-*.color10:      #0ed839
-
-! yellow
-*.color3:       #dddd13
-*.color11:      #dddd13
-
-! blue
-*.color4:       #3b48e3
-*.color12:      #3b48e3
-
-! magenta
-*.color5:       #f996e2
-*.color13:      #f996e2
-
-! cyan
-*.color6:       #23edda
-*.color14:      #23edda
-
-! white
-*.color7:       #ababab
-*.color15:      #f9f9f9
+! raven m9
+!#define t_bg_floor     #010000
+!#define t_bg_dip       #191815
+!#define t_background   #1f1e1b
+!#define t_bg_bump      #2B2A27
+!#define t_fg_comment   #68696C
+!#define t_foreground   #8E8F93
+!#define t_fg_highlight #9D9EA2
+!#define t_fg_ceiling   #FEFFFF
+!
+!*.background: t_background
+!*.foreground: t_foreground
+!
+!URxvt.colorBD: t_fg_highlight
+!URxvt.colorIT: t_fg_highlight
+!URxvt.colorUL: t_fg_highlight
+!
+!URxvt.cursorColor: #B47CAD
+!
+!! BLK
+!*.color0: t_bg_bump
+!*.color8: t_fg_comment
+!
+!! WHT
+!*.color7: t_fg_highlight
+!*.color15: t_fg_ceiling
+!
+!! RED
+!*.color1: #99554F
+!*.color9: #D58A83
+!
+!! YEL
+!*.color3: #756830
+!*.color11: #AE9D62
+!
+!! GRN
+!*.color2: #38754B
+!*.color10: #6EAC7E
+!
+!! CYN
+!*.color6: #007683
+!*.color14: #42AEBA
+!
+!! BLU
+!*.color4: #496AA0
+!*.color12: #81A0D9
+!
+!! MAG
+!*.color5: #8C5786
+!*.color13: #C58CBE

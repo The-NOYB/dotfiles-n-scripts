@@ -26,6 +26,8 @@ settings:
         <Ctrl+w>: null
         ci: hint images download
         gh: home
+  colors.webpage.bg:
+    global: white
   colors.webpage.darkmode.algorithm:
     global: lightness-cielab
   colors.webpage.darkmode.enabled:

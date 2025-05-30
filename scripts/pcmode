@@ -9,7 +9,7 @@ mouse
 loop=true
 
 [ $mode == "noloop" ] && loop=false && mode="all"
-[ $mode == "all" ] && sudo umount /mnt/C /mnt/D Games/; killall -q lemonbar && killall -q b.sh && bspc config top_padding 7 && mode="comp"
+[ $mode == "all" ] && sudo umount /mnt/C /mnt/D ~/Games/; killall -q lemonbar && killall -q b.sh && bspc config top_padding 7 && mode="comp"
 [ $mode == "comp" ] && killall -q picom
 [ $mode == "close" ] && xrandr --output eDP-1 --scale 1x1 && bspc quit && killall -q pcmode 
 

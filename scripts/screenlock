@@ -4,11 +4,9 @@ choice=$(($RANDOM%3))
 
 case $choice in
     0)
-      xlock -mode matrix & screenoff;;
+      xlock -mode matrix;;
     1)
-      xlock -mode pyro2 & screenoff;;
+      xlock -mode pyro2;;
     2)
-      xlock -mode pyro & screenoff;;
+      xlock -mode pyro;;
 esac
-
-

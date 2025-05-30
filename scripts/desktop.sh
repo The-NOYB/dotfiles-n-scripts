@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 b_y=`bspc query -D`
 a=`echo $b_y | awk '{print $1;}'`
 b=`echo $b_y | awk '{print $2;}'`

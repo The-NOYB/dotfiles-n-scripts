@@ -26,8 +26,9 @@ augroup END
 
 " my vimrc
 
-syntax on
+filetype plugin indent on
 filetype plugin on
+syntax on
 set number
 set ignorecase
 set relativenumber
@@ -43,13 +44,21 @@ set mat=2
 set path+=**
 set splitright
 set splitbelow
+set tabstop=4 shiftwidth=4 expandtab
 set <a-cr>=^[^M
 set omnifunc=syntaxcomplete#Complete
-set tabstop=4 shiftwidth=4 expandtab
 set foldopen-=search
+set termwinsize=15x
+let g:indent_guides_enable_on_vim_startup = 1
 
 "|| ! (clear && time ./.%<)
+nnoremap <PageUp>   :tabNext<CR>
+nnoremap <PageDown> :tabprevious<CR> 
+tnoremap <PageUp>   <C-w><C-k>:tabNext<CR>
+tnoremap <PageDown>   <C-w><C-h>:tabprevious<CR>
+
 xnoremap <leader>u :norm x<CR>
+nnoremap <leader>z :norm $zf%<CR>
 
 autocmd BufReadPost,BufNewFile *.tex setfiletype=tex
 autocmd Filetype tex setlocal spell
@@ -57,13 +66,20 @@ autocmd Filetype tex nnoremap <F5> :!clear; pdflatex % && evince %<.pdf<CR>
 autocmd Filetype tex nnoremap <leader>i :norm 3b3dw<CR>i
 autocmd Filetype tex nnoremap <leader>l :norm 0v$hS$<CR>
 
-
 autocmd Filetype arduino xnoremap <leader>c :norm i//<CR>
 autocmd Filetype arduino xnoremap <leader>u :norm 2x<CR>
-autocmd Filetype arduino nnoremap <F5> :! clear; arduino-cli compile --fqbn arduino:avr:nano:cpu=atmega328old ../%< && arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:nano ../%<<CR>
-autocmd Filetype arduino nnoremap <F6> :! clear; arduino-cli compile --fqbn esp32:esp32:nodemcu-32s ../%< && arduino-cli upload -p /dev/ttyUSB0 --fqbn esp32:esp32:nodemcu-32s ../%<<CR>
+autocmd Filetype arduino nnoremap <F6> :! clear; arduino-cli compile --fqbn arduino:avr:nano:cpu=atmega328old ../%< && arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:nano ../%<<CR>
+autocmd Filetype arduino nnoremap <F5> :! clear; arduino-cli compile --fqbn esp32:esp32:nodemcu-32s ../%< && arduino-cli upload -p /dev/ttyUSB0 --fqbn esp32:esp32:nodemcu-32s ../%<<CR>
+
+autocmd Filetype dart nnoremap <F5> :FlutterRun<CR>
+autocmd Filetype dart nnoremap <F6> :FlutterHotReload<CR>
+autocmd Filetype dart nnoremap <F7> :FlutterHotRestart<CR>
+autocmd Filetype dart xnoremap <leader>c :norm i//<CR>
+autocmd Filetype dart xnoremap <leader>u :norm 2x<CR>
 
 autocmd Filetype c xnoremap <leader>c :norm i//<CR>
+autocmd Filetype c xnoremap <leader>u :norm 2x<CR>
+autocmd Filetype c xnoremap <leader>u :norm 2x<CR>
 autocmd Filetype c xnoremap <leader>u :norm 2x<CR>
 autocmd Filetype c nnoremap <F5> :! clear; gcc % -o %<  && time ./%<<CR>
 autocmd Filetype c nnoremap <F6> :! clear; gcc -lglfw -lvulkan -lX11 -lpthread -lXrandr -ldl % -o %< && time ./%<<CR>
@@ -80,10 +96,16 @@ nmap gb :prev<CR>
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap / :set hlsearch<CR>/
 nnoremap <CR> :nohlsearch<CR>
+
+" basic c and fortran code structure
 nnoremap <leader>for :-1read /home/noyb/.config/vim/fortstr.txt<CR>2ecl
 nnoremap <leader>cst :-1read /home/noyb/.config/vim/cstc.txt<CR>8ji
+" python class and python qt code snippets
 nnoremap <leader>pyc :-1read /home/noyb/.config/vim/pyclass.txt<CR>2ecl
 nnoremap <leader>pyqt :-1read /home/noyb/.config/vim/pyqt.txt<CR>5ji
+" flutter stateless and statefull code snippets
+nnoremap <leader>ftl :-1read /home/noyb/.config/vim/ftrless.txt<CR>:%s/WidgetName/
+nnoremap <leader>ftf :-1read /home/noyb/.config/vim/ftrfull.txt<CR>:%s/WidgetName/
 inoremap " ""<Left>
 inoremap ' ''<Left>
 inoremap [ []<Left>
@@ -95,71 +117,71 @@ command Q q
 "nmap n :m+1<CR>
 "nmap m :m-2<CR>
 
-hi SpellBad ctermbg=52
-hi MatchParen term=bold cterm=underline ctermbg=203 ctermfg=0
-hi cursorline cterm=none ctermfg=none ctermbg=235
-hi cursorlinenr term=bold cterm=bold ctermfg=220
-hi LineNr ctermfg=136 ctermbg=NONE cterm=NONE
-hi Normal ctermfg=180 ctermbg=NONE cterm=NONE
-hi SignColumn ctermfg=103 ctermbg=NONE cterm=NONE
-hi SpecialComment ctermfg=161 ctermbg=NONE cterm=NONE
-hi Typedef ctermfg=215 ctermbg=NONE cterm=NONE
-hi Title ctermfg=76 ctermbg=NONE cterm=bold
-hi Folded ctermfg=111 ctermbg=NONE cterm=NONE
-hi PreCondit ctermfg=111 ctermbg=NONE cterm=NONE
-hi Include ctermfg=111 ctermbg=NONE cterm=NONE
-hi NonText ctermfg=NONE ctermbg=NONE cterm=NONE
-hi DiffText ctermfg=NONE ctermbg=17 cterm=NONE
-hi ErrorMsg ctermfg=NONE ctermbg=88 cterm=NONE
-hi Debug ctermfg=65 ctermbg=NONE cterm=NONE
-hi PMenu ctermfg=none ctermbg=233 cterm=NONE
-hi Identifier ctermfg=183 ctermbg=NONE cterm=NONE
-hi SpecialChar ctermfg=65 ctermbg=NONE cterm=NONE
-hi Conditional ctermfg=215 ctermbg=NONE cterm=NONE
-hi StorageClass ctermfg=137 ctermbg=NONE cterm=NONE
-hi Special ctermfg=65 ctermbg=NONE cterm=NONE
-hi StatusLine ctermfg=233 ctermbg=15 cterm=NONE
-hi Label ctermfg=215 ctermbg=NONE cterm=NONE
-hi PMenuSel ctermfg=233 ctermbg=255 cterm=NONE
-hi Search ctermfg=218 ctermbg=236 cterm=underline
-hi Delimiter ctermfg=66 ctermbg=NONE cterm=NONE
-hi Statement ctermfg=111 ctermbg=NONE cterm=NONE
-hi Character ctermfg=160 ctermbg=NONE cterm=NONE
-hi Number ctermfg=173 ctermbg=NONE cterm=NONE
-hi Boolean ctermfg=111 ctermbg=NONE cterm=NONE
-hi Operator ctermfg=111 ctermbg=NONE cterm=NONE
-hi TabLineFill ctermfg=136 ctermbg=NONE cterm=NONE
-hi DiffDelete ctermfg=52 ctermbg=52 cterm=NONE
-hi CursorColumn ctermfg=NONE ctermbg=NONE cterm=NONE
-hi Define ctermfg=111 ctermbg=NONE cterm=NONE
-hi Function ctermfg=222 ctermbg=NONE cterm=NONE
-hi FoldColumn ctermfg=111 ctermbg=NONE cterm=NONE
-hi PreProc ctermfg=111 ctermbg=NONE cterm=NONE
-hi Visua ctermfg=NONE ctermbg=242 cterm=NONE
-hi VertSplit ctermfg=235 ctermbg=235 cterm=Bold
-hi Exception ctermfg=215 ctermbg=NONE cterm=NONE
-hi Keyword ctermfg=215 ctermbg=NONE cterm=NONE
-hi Type ctermfg=215 ctermbg=NONE cterm=NONE
-hi DiffChange ctermfg=NONE ctermbg=NONE cterm=NONE
-hi Cursor ctermfg=NONE ctermbg=153 cterm=NONE
-hi Error ctermfg=NONE ctermbg=88 cterm=NONE
-hi SpecialKey ctermfg=8 ctermbg=236 cterm=NONE
-hi Constant ctermfg=173 ctermbg=NONE cterm=NONE
-hi Tag ctermfg=65 ctermbg=NONE cterm=NONE
-hi String ctermfg=107 ctermbg=NONE cterm=NONE
-hi MatchParen ctermfg=15 ctermbg=108 cterm=bold
-hi Repeat ctermfg=215 ctermbg=NONE cterm=NONE
-hi Directory ctermfg=186 ctermbg=NONE cterm=NONE
-hi Structure ctermfg=111 ctermbg=NONE cterm=NONE
-hi Macro ctermfg=111 ctermbg=NONE cterm=NONE
-hi DiffAdd ctermfg=NONE ctermbg=23 cterm=NONE
-hi TabLine ctermfg=220 ctermbg=241 cterm=NONE
-hi TabLineSel ctermfg=220 ctermbg=NONE cterm=NONE
-hi stringdelimiter ctermfg=101 ctermbg=NONE cterm=NONE
-hi string ctermfg=107 ctermbg=NONE cterm=NONE
-hi constant ctermfg=173 ctermbg=NONE cterm=NONE
-hi normal ctermfg=187 ctermbg=NONE cterm=NONE
-hi identifier ctermfg=111 ctermbg=NONE cterm=NONE
-hi comment ctermfg=29 ctermbg=NONE cterm=NONE
-hi function ctermfg=222 ctermbg=NONE cterm=NONE
-hi directory ctermfg=186 ctermbg=NONE cterm=NONE
+colorscheme gruvbox
+set background=dark
+hi cursorline cterm=none ctermfg=none ctermbg=236
+hi StatusLineNC ctermfg=238
+
+"hi StatusLineNC ctermfg=24
+"hi SpellBad ctermbg=52
+"hi MatchParen term=bold cterm=underline ctermbg=203 ctermfg=0
+"hi Cursor ctermfg=NONE ctermbg=153 cterm=NONE
+"hi cursorlinenr term=bold cterm=bold ctermfg=220
+"hi LineNr ctermfg=136 ctermbg=NONE cterm=NONE
+"hi normal ctermfg=187 ctermbg=NONE cterm=NONE
+"hi SignColumn ctermfg=103 ctermbg=NONE cterm=NONE
+"hi Typedef ctermfg=215 ctermbg=NONE cterm=NONE
+"hi Title ctermfg=76 ctermbg=NONE cterm=bold
+"hi Folded ctermfg=111 ctermbg=NONE cterm=NONE
+"hi PreCondit ctermfg=111 ctermbg=NONE cterm=NONE
+"hi Include ctermfg=111 ctermbg=NONE cterm=NONE
+"hi NonText ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi ErrorMsg ctermfg=NONE ctermbg=88 cterm=NONE
+"hi Debug ctermfg=65 ctermbg=NONE cterm=NONE
+"hi PMenu ctermfg=none ctermbg=233 cterm=NONE
+""hi Identifier ctermfg=183 ctermbg=NONE cterm=NONE
+""hi identifier ctermfg=111 ctermbg=NONE cterm=NONE
+"hi SpecialChar ctermfg=65 ctermbg=NONE cterm=NONE
+"hi Conditional ctermfg=215 ctermbg=NONE cterm=NONE
+""hi StorageClass ctermfg=137 ctermbg=NONE cterm=NONE
+""hi Special ctermfg=65 ctermbg=NONE cterm=NONE
+"hi StatusLine ctermfg=233 ctermbg=15 cterm=NONE
+""hi Label ctermfg=215 ctermbg=NONE cterm=NONE
+""hi PMenuSel ctermfg=233 ctermbg=255 cterm=NONE
+"hi Search ctermfg=218 ctermbg=236 cterm=underline
+"hi Delimiter ctermfg=66 ctermbg=NONE cterm=NONE
+"hi Statement ctermfg=111 ctermbg=NONE cterm=NONE
+"hi Character ctermfg=160 ctermbg=NONE cterm=NONE
+"hi Number ctermfg=173 ctermbg=NONE cterm=NONE
+"hi Boolean ctermfg=111 ctermbg=NONE cterm=NONE
+"hi Operator ctermfg=111 ctermbg=NONE cterm=NONE
+"hi TabLineFill ctermfg=136 ctermbg=NONE cterm=NONE
+"hi TabLine ctermfg=220 ctermbg=241 cterm=NONE
+"hi TabLineSel ctermfg=220 ctermbg=NONE cterm=NONE
+"hi Define ctermfg=111 ctermbg=NONE cterm=NONE
+"hi Function ctermfg=222 ctermbg=NONE cterm=NONE
+""hi FoldColumn ctermfg=111 ctermbg=NONE cterm=NONE
+""hi PreProc ctermfg=111 ctermbg=NONE cterm=NONE
+""hi Visua ctermfg=NONE ctermbg=242 cterm=NONE
+"hi VertSplit ctermfg=235 ctermbg=235 cterm=Bold
+"hi Exception ctermfg=215 ctermbg=NONE cterm=NONE
+"hi Keyword ctermfg=215 ctermbg=NONE cterm=NONE
+""hi Type ctermfg=215 ctermbg=NONE cterm=NONE
+"hi Error ctermfg=NONE ctermbg=160 cterm=NONE
+"hi SpecialKey ctermfg=8 ctermbg=236 cterm=NONE
+"hi Constant ctermfg=173 ctermbg=NONE cterm=NONE
+""hi Tag ctermfg=65 ctermbg=NONE cterm=NONE
+"hi String ctermfg=107 ctermbg=NONE cterm=NONE
+""hi stringdelimiter ctermfg=101 ctermbg=NONE cterm=NONE
+""hi Repeat ctermfg=215 ctermbg=NONE cterm=NONE
+""hi Structure ctermfg=111 ctermbg=NONE cterm=NONE
+""hi Macro ctermfg=111 ctermbg=NONE cterm=NONE
+"hi Directory ctermfg=186 ctermbg=NONE cterm=NONE
+"hi SpecialComment ctermfg=244 ctermbg=NONE cterm=NONE
+"hi Comment ctermfg=244 ctermbg=NONE cterm=NONE
+"hi DiffAdd    cterm=bold ctermfg=10 ctermbg=17
+"hi DiffDelete cterm=bold ctermfg=10 ctermbg=17
+"hi DiffChange cterm=bold ctermfg=10 ctermbg=17
+"hi DiffText   cterm=bold ctermfg=10 ctermbg=88
+"hi IndentGuidesOdd  ctermbg=233
+"hi IndentGuidesEven ctermbg=NONE

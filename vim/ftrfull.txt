@@ -1,0 +1,13 @@
+class WidgetName extends StatefulWidget {
+  const WidgetName({ super.key });
+
+  @override
+  State<WidgetName> createState() => _WidgetName();
+}
+
+class _WidgetName extends State<WidgetName> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(color: const Color(0xFFFFE306));
+  }
+}
