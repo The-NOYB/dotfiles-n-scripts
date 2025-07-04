@@ -65,6 +65,8 @@ autocmd Filetype tex setlocal spell
 autocmd Filetype tex nnoremap <F5> :!clear; pdflatex % && evince %<.pdf<CR>
 autocmd Filetype tex nnoremap <leader>i :norm 3b3dw<CR>i
 autocmd Filetype tex nnoremap <leader>l :norm 0v$hS$<CR>
+autocmd Filetype tex xnoremap <leader>c :norm i%<CR>
+autocmd Filetype tex xnoremap <leader>u :norm x<CR>
 
 autocmd Filetype arduino xnoremap <leader>c :norm i//<CR>
 autocmd Filetype arduino xnoremap <leader>u :norm 2x<CR>
@@ -81,8 +83,8 @@ autocmd Filetype c xnoremap <leader>c :norm i//<CR>
 autocmd Filetype c xnoremap <leader>u :norm 2x<CR>
 autocmd Filetype c xnoremap <leader>u :norm 2x<CR>
 autocmd Filetype c xnoremap <leader>u :norm 2x<CR>
-autocmd Filetype c nnoremap <F5> :! clear; gcc % -o %<  && time ./%<<CR>
-autocmd Filetype c nnoremap <F6> :! clear; gcc -lglfw -lvulkan -lX11 -lpthread -lXrandr -ldl % -o %< && time ./%<<CR>
+autocmd Filetype c nnoremap <F5> :! clear; gcc -Werror % -o %<  && time ./%<<CR>
+autocmd Filetype c nnoremap <F6> :! clear; gcc -Werror -lglfw -lvulkan -lX11 -lpthread -lXrandr -ldl % -o %< && time ./%<<CR>
 
 autocmd Filetype fortran xnoremap <leader>c :norm i!<CR>
 autocmd Filetype fortran nnoremap <F5> :! clear; gfortran % -o %< && time ./%<<CR>

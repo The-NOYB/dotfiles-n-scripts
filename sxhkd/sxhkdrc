@@ -10,6 +10,14 @@ ctrl + alt + t
 super + x
 	dmenu_run -sb "dark green"
 
+# quick launch programs
+super + n
+	notes.sh
+
+# quick music
+super + a
+	music.sh
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -68,8 +76,12 @@ super + bracket{left,right}
 
 
 # focus the older or newer node in the focus history
-alt + {shift + Tab, Tab}
-	bspc node -f {prev,next}.local.window	
+alt + shift + Tab
+	bspc node -f prev.local.window	
+
+alt + Tab
+    cycle.sh
+
 
 #
 # preselect
@@ -120,13 +132,13 @@ super + d
 
 # volume
 XF86AudioRaiseVolume
-	amixer sset Master 2%+
+	pamixer -i 2
 
 XF86AudioLowerVolume
-	amixer sset Master 2%-
+	pamixer -d 2
 
 XF86AudioMute
-	amixer sset Master toggle
+	pamixer -t
 
 # brightness
 ctrl + F3

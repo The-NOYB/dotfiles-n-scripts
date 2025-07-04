@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# emptying the file
-echo "" > ~/cs/files/.win_data
-
+# get focused window and if focused window is fullscreen
 focused_window=$(bspc query -N -n .window.focused)
-fullscreen_window=$(bspc query -N -n .fullscreen.window -d focused)
+focused_window_is_fullscreen=$(bspc query -N -n $focused_window.fullscreen)
+[ -z $focused_window_is_fullscreen ] && focused_window_is_fullscreen=0 || focused_window_is_fullscreen=1
+
 
 # arrays of all windows and all hidden windows
 all_windows=($(bspc query -N -n .window -d focused))
@@ -25,12 +25,27 @@ for _win in $windows_to_remove; do
     unset all_windows[$_win]
 done
 
-echo ${all_windows[@]}
+len=${#all_windows[@]}
+[ $len == 1 ] && exit 1
 
-$cat ~/cs/files/.win_data
+# bool for gettin next window and iterator
+next_is=0
+i=0
 
-# cycle through all focused windows only
-# if a window is fullscreen (and not hidden) then hide the fullscreen window and then cycle, unhide the fullscreen window if it is the next
-# if the any window was hidden before the script then do not cycle through it
+for _win in ${all_windows[@]}; do
+    [ -z $first ] && first=$_win    # getting the first unhidden window
+    [ $next_is == 1 ] && dest_window=$_win && break
+    [ $_win == $focused_window ] && next_is=1   # enablingthe bool when we find the focused window
+done
 
-# get all windows loop through if they are fullscreen, hidden, both, or normal
+# setting destinaton window to first unhidden window in the case if destinaton window is the last window
+[ -z $dest_window ] && dest_window=$first
+#echo destinaton window $dest_window
+
+# hidding the focused fullscreen window
+[ $focused_window_is_fullscreen == 1 ] && bspc node $focused_window -g hidden
+
+# changing focus to destination window
+bspc node -f $dest_window
+
+#echo all unhidden windows ${all_windows[@]} and currectly focused window $focused_window

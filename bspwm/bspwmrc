@@ -38,6 +38,8 @@ bspc config pointer_action1 move
 
 # rules for application
 bspc rule -a discord desktop='^3'  
+bspc rule -a legcord desktop='^3'  
+bspc rule -a Godot desktop='^3' state=pseudo_tiled
 bspc rule -a zenity state=floating
 bspc rule -a KiCad desktop='^3'  
 bspc rule -a qutebrowser desktop='^3'  
@@ -50,9 +52,10 @@ bspc rule -a Pavucontrol state=floating
 bspc rule -a Steam desktop='^2' state=floating
 bspc rule -a Lutris desktop='^2'
 bspc rule -a steam desktop='^2' state=floating
-bspc rule -a vlc state=floating
+bspc rule -a vlc desktop='^2' state=tiled
 bspc rule -a antimicrox state=floating 
 bspc rule -a Gimp desktop='^3'
+bspc rule -a FreeTube desktop='^3'
 bspc rule -a gnome-calculator state=floating
 bspc rule -a Gnome-calculator state=floating
 bspc rule -a Calculator state=floating

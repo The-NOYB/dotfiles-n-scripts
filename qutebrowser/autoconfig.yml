@@ -47,6 +47,9 @@ settings:
   content.media.video_capture:
     https://discord.com: true
   content.notifications.enabled:
+    https://pornone.com: false
+    https://thepiratebay.org: false
+    https://toxigon.com: false
     https://web.tolstoycomments.com: false
   content.pdfjs:
     global: false
