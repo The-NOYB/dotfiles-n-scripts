@@ -53,6 +53,8 @@ settings:
     https://web.tolstoycomments.com: false
   content.pdfjs:
     global: false
+  content.prefers_reduced_motion:
+    global: true
   content.proxy:
     global: system
   content.register_protocol_handler:

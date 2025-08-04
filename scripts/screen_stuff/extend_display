@@ -1,0 +1,44 @@
+#!/bin/bash
+
+killall -q lemonbar;
+killall -q b2.sh;
+
+
+xrandr --newmode "tab"  48.96  1024 1064 1168 1312  600 601 604 622  -HSync +Vsync
+
+xrandr --addmode HDMI-1 tab;
+
+xrandr --output HDMI-1 --mode tab --left-of eDP-1;
+
+adb reverse tcp:1701 tcp:1701;
+
+adb reverse tcp:9001 tcp:9001;
+
+# THESE WERE FOR VNC, WE DO NOT USE THIS
+#x11vnc -rfbport 5900 -clip xinerama0 -wait 1 -defer 1 -nowf -sb 0 &
+#
+#adb reverse tcp:5900 tcp:5900;
+
+xwallpaper --clear;
+
+xwallpaper --center ~/Pictures/omni-man-invincible-series-art-hd-wallpaper-uhdpaper.com-132@1@n.jpg
+
+b2.sh | lemonbar -p -B#1F1D19 -F#DEDEDE -u 3  -f "monospace-10" -g x27 | $SHELL &
+
+bspc desktop Desktop -l monocle;
+
+bspc config top_monocle_padding -30;
+
+bspc rule -a discord desktop='^4'
+bspc rule -a legcord desktop='^4'
+bspc rule -a KiCad desktop='^4'
+bspc rule -a qutebrowser desktop='^2'
+bspc rule -a krita desktop='^4'
+bspc rule -a Chromium-browser desktop='^2'
+bspc rule -a chromium desktop='^2'
+bspc rule -a Steam desktop='^3' state=floating
+bspc rule -a Lutris desktop='^3'
+bspc rule -a steam desktop='^3' state=floating
+bspc rule -a vlc desktop='^3' state=tiled
+bspc rule -a Gimp desktop='^4'
+bspc rule -a FreeTube desktop='^3'

@@ -82,6 +82,8 @@ alt + shift + Tab
 alt + Tab
     cycle.sh
 
+super + w
+    screen_scripts
 
 #
 # preselect
@@ -113,7 +115,7 @@ super + {Left,Down,Up,Right}
 
 # move to other desktop
 super + alt + bracket{left,right}
-	bspc node -d {prev,next} --follow 
+	bspc node -d {prev,next}.local --follow 
 
 # send the newest marked node to the newest preselected node
 super + b 

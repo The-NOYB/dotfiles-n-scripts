@@ -1,0 +1,7 @@
+#!/bin/bash
+
+read $1 $2 $3
+
+[ $3 == 0 ] && ffmpeg -i $1 -filter:v 'crop=ih/3*4:ih' -c:v libx264 -preset veryfast -vf "fps=20,scale=320:-1" $2
+
+[ 1 == $3 ] && ffmpeg -i $1 -filter:v 'setpts=0.75*PTS,crop=ih/3*4:ih' -c:v libx264 -preset veryfast -vf "fps=20,scale=320:-1" $2
